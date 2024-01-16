@@ -12,12 +12,12 @@
   --fw-700: 700;
   --fw-900: 900;
 
-  --clr-primary-200: hsla(169, 70%, 95%, 1);
-  --clr-primary-300: hsla(169, 100%, 39%, 1);
-  --clr-primary-400: hsla(169, 100%, 26%, 1);
-  --clr-primary-500: hsla(169, 100%, 16%, 1);
+  --clr-primary-200: rgb(255, 255, 255);
+  --clr-primary-300: #00c7a2;
+  --clr-primary-400: #e88726;
+  --clr-primary-500: rgb(76, 8, 213);
 
-  --clr-neutral-100: hsla(0, 0%, 100%, 1);
+  --clr-neutral-100: rgb(255, 255, 255);
   --clr-neutral-300: hsla(0, 0%, 50%, 1);
   --clr-neutral-400: hsla(0, 0%, 40%, 1);
   --clr-neutral-500: hsla(0, 0%, 60%, 1);
@@ -57,7 +57,28 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  
 }
+
+.hero p {
+  color:white;
+}
+
+.hero__image {
+  border-radius: 25px;
+  border: 5px solid rgb(76, 8, 213);
+}
+
+.snippet__image {
+  border-radius: 25px;
+  border: 5px solid rgb(76, 8, 213);
+}
+
+.snippet p  {
+  color: white;
+}
+
+
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul:where([role="list"]),
@@ -77,7 +98,14 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: rgb(8, 8, 8);
 }
+
+
+
+
+
+
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
@@ -211,7 +239,7 @@ section,
 }
 
 .nav-list a {
-  color: var(--clr-neutral-900);
+  color: white;
   text-decoration: none;
 }
 
@@ -274,6 +302,10 @@ section,
     margin-bottom: 3rem;
   }
 
+  .main-article {
+    color: rgb(225, 225, 225);
+  }
+
   .main-article__figure figcaption {
     margin: 1rem 0;
     font-size: var(--fs-300);
@@ -304,13 +336,26 @@ section,
 .snippet__title {
   grid-area: title;
 }
+
+.featured-articles p.snippet__body {
+  color: black;
+}
+
+h3.snippet__title  {
+  color: rgb(255, 255, 255);
+}
+
+.featured-articles h3.snippet__title  {
+  color: rgb(24, 0, 161);
+}
+
 .snippet__meta {
   grid-area: meta;
   color: var(--clr-neutral-300);
 }
 
 .snippet__meta span {
-  color: var(--clr-neutral-900);
+  color: purple;
 }
 
 .snippet .btn {

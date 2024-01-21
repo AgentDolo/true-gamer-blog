@@ -1,0 +1,33 @@
+---
+title: News
+layout: 'base.njk'
+---
+
+
+   <section class="hero">
+  <div class="container flow">
+      <div class="hero__content flow">
+        <h1 class="section-title">TGN <span class="purple-text">NEWS.</span></h1>
+        <p>Stay up to date with the latest Gaming news.</p>
+        
+        
+      </div>
+      
+  </div>
+</section>
+       
+<div id="news-content" class="section container">
+<h1 class="section-title"></h1>
+
+<ul role="list" class="articles__list flow">
+
+  {%- for post in collections.articles | reverse -%}
+      {% include 'article-snippet.njk' %}
+
+  {%- endfor %}
+
+</ul>
+
+  </div>
+  
+    

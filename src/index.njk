@@ -1,6 +1,7 @@
 ---
-title: TrueGamerBlog
+title: Home
 layout: 'base.njk'
+
 ---
 
 
@@ -9,34 +10,63 @@ layout: 'base.njk'
 <section class="hero">
   <div class="container flow">
       <div class="hero__content flow">
-        <h1 class="section-title">TrueGamer blog!</h1>
-        <p>Stay up to date with the latest Gaming news.</p>
-        <p>MW3 | Warzone | MW Zombies</p>
-        <div class="flex-group">
-          <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
-          <a href="./blog" class="btn btn--neutral">Most recent articles</a>
-        </div>
+        <h1 class="section-title">UP YOUR GAME WITH <span class="purple-text">PRO </span>INSIGHTS.</h1>
+          <p>SELECT A GAME TO BEGIN</p>
+        
+        
       </div>
-      <div>
-        <img src="//unsplash.it/510" alt="" class="hero__image">
-      </div>
+      
   </div>
+</section>
+
+<section id="landing-content" class="landing-content">
+  <div class="container flow">
+    <div class="headline">
+      <h2>ALL Games</h2>
+      <div class="sort-filter">
+        <label for="popularity-filter">Sort by:</label>
+        <select id="sort-filter">
+          <option value="popularity">Popularity</option>
+          <option value="name">Name</option>
+          <!-- Add more sorting options if needed -->
+        </select>
+      </div>
+    </div>
+
+    <div class="games-list" id="games-list">
+      <!-- Game items will be dynamically added here using JavaScript -->
+    </div>
+  </div>
+</section>
+
 </section>
 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
-    <h2 class="section-title text-center ">Featured articles</h2>
-    <p class="text-center">Here is a sample of articles which I feel give you a good idea of what this site is all about.</p>
-    <ul role="list" class="articles__list flow">
+    <h2 class="section-title text-left">NEWS</h2>
+    
 
-      {%- for post in collections.featured -%}
-          {% include 'article-snippet.njk' %}
-    
-      {%- endfor %}
-    
-    </ul>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+
+        {%- for post in collections.featured | reverse -%}
+          <div class="swiper-slide">
+            {% include 'article-snippet.njk' %}
+          </div>
+        {%- endfor %}
+
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
   </div>
-</section> 
+</section>
+
+
+
 
     
 

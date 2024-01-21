@@ -1,21 +1,24 @@
 :root {
+  --fs-100: .9rem;
   --fs-300: 0.9375rem;
   --fs-400: 1.0625rem;
   --fs-500: 1.375rem;
   --fs-600: 1.875rem;
   --fs-700: 2rem;
 
-  --ff-body: "Roboto", sans-serif;
-  --ff-heading: "Playfair Display", serif;
-
+  --ff-body: "Asap";
+  --ff-heading: "Asap";
+  
+  --fw-100: 100;
   --fw-400: 400;
   --fw-700: 700;
   --fw-900: 900;
+  
 
   --clr-primary-200: rgb(255, 255, 255);
   --clr-primary-300: #00c7a2;
-  --clr-primary-400: #e88726;
-  --clr-primary-500: rgb(76, 8, 213);
+  --clr-primary-400: #BE4644;
+  --clr-primary-500: #6261D9;
 
   --clr-neutral-100: rgb(255, 255, 255);
   --clr-neutral-300: hsla(0, 0%, 50%, 1);
@@ -26,6 +29,7 @@
 
 @media (min-width: 35em) {
   :root {
+    --fs-100: .98rem;
     --fs-300: 1rem;
     --fs-400: 1.125rem;
     --fs-500: 1.5rem;
@@ -45,6 +49,12 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Asap';
+  src: url(fonts/Asap_Complete/Asap-Bold.ttf);
+}
+
+
 /* Remove default margin */
 body,
 h1,
@@ -57,28 +67,32 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  letter-spacing: .5px;
   
 }
 
 .hero p {
-  color:white;
+  color:var(--clr-primary-400);
 }
 
 .hero__image {
   border-radius: 25px;
-  border: 5px solid rgb(76, 8, 213);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5); /*add blurred effect using box-shadow */
 }
 
 .snippet__image {
   border-radius: 25px;
-  border: 5px solid rgb(76, 8, 213);
+  box-shadow: 0 0 1px rgb(0, 0, 0, 0.5); /* Add blurred effect using box-shadow */
 }
 
 .snippet p  {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
-
+#blog-content .snippet p  {
+  color: rgb(204, 204, 204);
+  
+}
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul:where([role="list"]),
@@ -98,7 +112,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: rgb(8, 8, 8);
+  background-color: #0B0A0E;
+  padding-bottom: 1rem;
 }
 
 
@@ -115,7 +130,7 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
+  /*max-width: 100%;*/
   display: block;
 }
 
@@ -157,17 +172,17 @@ h1,
 h2,
 h3 {
   font-family: var(--ff-heading);
-  font-weight: var(--fw-900);
+  font-weight: var(--fw-300);
   line-height: 1.1;
 }
 
 strong {
-  font-weight: var(--fw-700);
+  font-weight: var(--fw-300);
 }
 
 section,
 .section {
-  padding: min(10vh, 10em) 0;
+  padding: min(5vh, 10em) 0;
 }
 
 
@@ -208,15 +223,38 @@ section,
 
 .article-title,
 .section-title {
-  color: var(--clr-primary-500);
+  color: var(--clr-primary-200);
+  font-family:'Asap';
+  font-weight: 900;
 }
 
 .article-title {
-  font-size: var(--fs-700);
+  font-size: var(--fs-400);
+  padding-top: 30px;
+  padding-bottom: 20px;
+  letter-spacing: 1px;;
 }
 
 .section-title {
-  font-size: var(--fs-600);
+  font-size: var(--fs-500);
+}
+
+.purple-text {
+  color: var(--clr-primary-500);
+}
+
+
+
+
+
+
+
+@media (min-width: 45em) {
+  .article-title {
+    font-size: var(--fs-600);
+    padding: 10px;
+    letter-spacing: 1px;;
+  }
 }
 
 
@@ -233,37 +271,644 @@ section,
   justify-content: space-between;
 }
 
-.nav-list {
-  margin: 0;
-  padding: 0;
-}
 
-.nav-list a {
-  color: white;
+
+
+
+
+
+
+
+/* Add this to your stylesheet */
+
+
+/* Update the CSS for .swiper-container */
+.swiper-container {
+  width: 100%; /* Adjust the width as needed */
+  max-width: 600px; /* Set a max-width to control the size on larger screens */
+  height: 250px; /* Adjust the height as needed */
+  overflow: hidden; 
   text-decoration: none;
+  
 }
 
-.nav-list a:focus,
-.nav-list a:hover {
-  color: var(--clr-primary-400);
-  text-decoration: underline;
+/* Optionally, adjust the styling for the slides */
+.swiper-slide {
+  background-color: #151416; /* Set background color if needed */
+  border: 1px solid ; /* Add a border for separation */
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+ 
 }
+
+/* Remove li::marker from each slide in the Swiper container */
+.swiper-container li {
+  list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.game-item {
+  position: relative;
+  display: inline-block;
+  margin: 10px; /* Adjust margin as needed */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1px 5px 1px 5px;
+  background-color: #d93838fb;
+  color: white;
+  font-size: 7px;
+  border: 2px solid #d93838fb;
+  z-index: 1;
+  border-bottom-left-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.games-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 20px), 1fr)); /* Adjust the width as needed */
+  gap: 10px;
+}
+
+.game {
+  border: none;
+  text-align: center;
+}
+
+.game-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Adjust the radius as needed */
+  height: 0;
+  padding-bottom: 133.33%; /* 4:3 aspect ratio (3 / 4 * 100) */
+}
+
+.game-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  max-width: 100%;
+}
+
+.game-info p{
+  display: none; /* Hide the description */
+}
+
+.game h3 {
+  margin: 10px 0;
+}
+
+.game h3 {
+  color:#ddd;
+  font-size: var(--fs-300);
+}
+
+
+
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ddd;
+}
+
+.headline h2{
+  font-size: var(--fs-400);
+}
+
+.sort-filter {
+  display: flex;
+  gap: 10px;
+  padding-right: 1px;
+}
+
+#sort-filter {
+  margin-left: auto; /* Push "Sort by" to the right */
+  border-color: #dddddd00;
+  background-color: #00000000;
+  color: #ddd;
+}
+
+/* Additional styling as needed */
+
+
+
+
+
+
+/* Updated styles for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__item.dropdown {
+    position: relative; /* Keep relative positioning for mobile */
+  }
+
+  .sublinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background: #13131300; /* Adjust background color */
+    width: 100%;
+    font-size: var(--fs-100);
+    padding: 1rem 0; /* Adjust padding as needed */
+    
+    z-index: 99;
+    list-style: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+  }
+
+  .navbar__item.dropdown:hover .sublinks {
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -1.5rem;
+}
+
+  .sublinks a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    color: #a5a4f2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .sublinks a:hover {
+    color: #6261D9; /* Adjust color on hover */
+  }
+
+  /* Added styles for the arrow */
+  .arrow {
+    
+    font-size: 0.5rem;
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+  background: #0B0A0E; /* Change background color */
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  white-space: nowrap; /* Prevent text from wrapping */
+  box-shadow: 0 .8px 1.9px #151416; /* Add blurred effect using box-shadow */
+
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+  
+}
+
+#navbar__logo {
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+
+}
+
+#navbar__logo img {
+  width: 120px; /* Adjust the size according to your preference */
+}
+
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  
+  width: 100%;
+}
+
+.navbar__item {
+  display: flex;
+  height: 70px;
+  padding: 10px;
+  justify-content: space-between; /* Add this line to evenly space items */
+  width: 100%;
+}
+
+
+.navbar__links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:135px;
+  text-decoration: none;
+  height: 100%;
+  padding: 0 1rem;
+  list-style: none; /* Remove default list-style */
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0rem;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 1.5px 20px;
+  height: 50%;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: #BE4644;
+  background: -webkit-linear-gradient(to right, #6261D9, #969dff, #6261D9);
+  background: linear-gradient(to right, #6261D9, #969dff, #6261D9);
+  color: #fff;
+  transition: all .3s ease;
+}
+
+
+.button:hover {
+  background: #b7bbf6;
+  transition: all .7s ease;
+  color: black;
+
+}
+
+.navbar__links:hover {
+  color: #6261D9;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+
+
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+  }
+
+  .navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -10500px;
+    opacity: 0; /* Set initial opacity to 0 */
+    transition: top 0.01s ease, opacity 0.5s ease;
+    z-index: -1;
+    background: #131313;
+    margin-left: 0rem;
+    padding: 0;
+  }
+
+  /* Define the "no-scroll" class */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Apply the "no-scroll" class only for devices with a maximum width of 768 pixels */
+@media (max-width: 768px) {
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+
+  
+  
+  .navbar__menu.active {
+    background: #000000fb;
+    top: 100%;
+    opacity: 1; /* Set final opacity to 1 */
+    transition: top 0.01s ease, opacity 0.5s ease; /* Adjusted the transition properties */
+    z-index: 99;
+    height: 100vh;
+    font-size: 1.6rem;
+    width: 100%;
+    margin-left: 0rem;
+    padding: 0;
+    box-shadow: 0 .8px 1.9px #868686; /* Add blurred effect using box-shadow */
+    touch-action: none; 
+    
+  }
+  
+  
+
+  #navbar__logo {
+    padding-left: 25px;
+    width: 50px;
+  }
+
+  #navbar__logo img {
+    width: 120px; /* Adjust the size according to your preference */
+}
+
+
+  .navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+  }
+
+  .navbar__item {
+    width: 100%;
+  }
+
+  .navbar__links {
+    text-align: center;
+    padding: 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-evenly;
+    font-size: var(--fs-500);
+  }
+
+  .navbar__btn {
+    padding-bottom: 15rem;
+    padding-top: 10rem;
+    
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 60px;
+    margin: 0;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 10%;
+    right: 7%;
+    transform: translate(5%, 20%);
+  }
+
+  .navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+
+
+
+
+
 
 /* //////////////////////
   Footer
   /////////////////////// */
 
-.site-footer {
-  --logo-color: currentColor;
-  padding: 2em 0;
-  color: var(--clr-neutral-100);
-  background-color: var(--clr-primary-500);
-  text-align: center;
+  .site-footer {
+    --logo-color: currentColor;
+    padding: 1rem 0;
+    padding-top: 0rem;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    border: 2px solid #161414;
+
+  }
+
+  .site-footer div {
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+    justify-content: center; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    max-width: 100%;
+    margin-top: -.4rem;
 }
+
+.site-footer div a.social-icon {
+  width: 2rem; 
+  padding-top: 0px;
+  height: 5rem;
+  margin-top: -1rem;
+  
+}
+
+
+
+
+
+  
+  .site-footer a {
+    
+    display: flex;
+      justify-content: space-around;
+      text-decoration: none;
+      color: #ddd;
+      font-size: 12px;
+  }
+ 
+  .site-footer p {
+    padding: 1rem;
+    margin: 0; /* Remove default margin for paragraphs */
+    color: #ddd;
+    font-size: 10px;
+  }
+
+
+
+  
 
 /* //////////////////////
   Homepage
   /////////////////////// */
+
+  .hero__content {
+    text-align: center;
+  }
+  
+
+  .flex-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* Additional styling for the buttons */
+  .flex-group a {
+    margin-right: 0px; /* Adjust the margin as needed */
+  }
+  
+  .hero {
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-bottom: 2px solid #161414; /* Add your border color */
+  }
+  
+  
 
 .hero > div {
   display: grid;
@@ -274,6 +919,7 @@ section,
 }
 
 .hero__image {
+  display: none;
   width: 100%;
   /* max-height: max(15rem, 40vh); */
   object-fit: cover;
@@ -286,12 +932,13 @@ section,
 }
 
 .featured-articles {
-  background-color: var(--clr-primary-200);
+  background-color: #0B0A0E;
+  ;
 }
 
 .articles__list {
   --flow-spacer: 3rem;
-  margin: 6rem 0;
+  margin: -1rem 0;
 }
 
 /* //////////////////////
@@ -302,14 +949,42 @@ section,
     margin-bottom: 3rem;
   }
 
+  .main-article  {
+    font-size: var(--fs-300);
+    font-weight: var(--fw-600);
+  }
+
+  .main-article img {
+    max-width: 75%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make the image a block-level element */
+    margin: 0 auto; /* Set left and right margins to auto for centering */
+}
+
+
+  
+
   .main-article {
     color: rgb(225, 225, 225);
   }
 
   .main-article__figure figcaption {
     margin: 1rem 0;
-    font-size: var(--fs-300);
+    font-size: var(--fs-100);
     opacity: .9;
+  }
+
+  @media (min-width: 45em) {
+    .main-article  {
+      font-size: var(--fs-500);
+      font-weight: var(--fw-600);
+    }
+
+    .main-article__figure figcaption {
+      margin: 1rem 0;
+      font-size: var(--fs-700);
+      opacity: .9;
+    }
   }
 
 /* //////////////////////
@@ -332,6 +1007,7 @@ section,
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-radius: 10px;
 }
 .snippet__title {
   grid-area: title;
@@ -343,10 +1019,11 @@ section,
 
 h3.snippet__title  {
   color: rgb(255, 255, 255);
+  font-size: var(--fs-300);
 }
 
 .featured-articles h3.snippet__title  {
-  color: rgb(24, 0, 161);
+  color: rgb(255, 255, 255);
 }
 
 .snippet__meta {
@@ -354,8 +1031,11 @@ h3.snippet__title  {
   color: var(--clr-neutral-300);
 }
 
+
+
 .snippet__meta span {
-  color: purple;
+  color: var(--clr-neutral-400);
+  font-size: 12px;
 }
 
 .snippet .btn {
@@ -395,7 +1075,7 @@ h3.snippet__title  {
   text-decoration: none;
   display: inline-block;
   line-height: 1;
-  padding: 0.75em 1.75em;
+  padding: .75em .75em;
   border-radius: 0.25em;
   align-self: start;
   justify-self: start;
@@ -407,10 +1087,10 @@ h3.snippet__title  {
 }
 
 .btn--primary {
-  background: var(--clr-primary-400);
+  background: var(--clr-primary-500);
   color: var(--clr-neutral-100);
-  font-weight: var(--fw-700);
-  border: 2px solid var(--clr-primary-400);
+  font-weight: var(--fw-300);
+  border: 2px solid var(--clr-primary-500);
 }
 .btn--primary:hover,
 .btn--primary:focus {
@@ -421,7 +1101,7 @@ h3.snippet__title  {
 .btn--neutral {
   background-color: var(--clr-neutral-100);
   color: var(--clr-neutral-900);
-  font-weight: var(--fw-700);
+  font-weight: var(--fw-300);
   border: 2px solid var(--clr-neutral-900);
 }
 

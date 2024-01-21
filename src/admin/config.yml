@@ -1,20 +1,64 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
-media_folder: "pblic/assets/blog"
-puublic_foler: "/assets/blog"
+media_folder: "public/assets/images"
+public_foler: "/assets/images"
 collections: 
-    - name: "blog"
-      label: "Blog"
-      folder: "src/blog"
+    - name: "news"
+      label: "News"
+      folder: "src/news/articles"
       create: true
-      slug: "{{year}}-{{month}}-{{day}}"
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
       fields:
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Description", name: "description", widget: "string" }
-        - { label: "Athor", name: "author", widget: "string" }
+        - { label: "Author", name: "author", widget: "string" }
         - { label: "Date", name: "date", widget: "datetime" }
-        - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+        - { label: "Tags", name: "tags", widget: "list", default: ["articles", "mw3", "wz"] }
         - { label: "Featured Image", name: "image", widget: "image" }
         - { label: "Image caption", name: "imageAlt", widget: "string" }
         - { label: "Body", name: "body", widget: "markdown" }
+
+
+ 
+    - name: "wz-meta-loadout"
+      label: "WZ Meta Loadout"
+      folder: "src/wz/meta-loadout"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      fields:
+        - { label: "Author", name: "wz-loadout-author", widget: "list", default: ["TG TEAM"] }
+        - { label: "Gun Name", name: "title", widget: "list", default: ["Striker", "MCW"] }
+        - { label: "Category", name: "wz-gun-category", widget: "list", default: ["AR", "SMG", "LMG", "SNIPER", "BR", "SHOTGUN", "MELEEgh"] }
+        - { label: "Date", name: "wz-loadout-date", widget: "datetime" }
+        - { label: "Featured Image", name: "wz-gun-image", widget: "image" }
+        - { label: "Range", name: "wz-gun-range", widget: "list", default: ["Short", "Long"] }
+        - { label: "Magazine", name: "wz-gun-magazine", widget: "list", default: ["10", "25"] }
+        - { label: "Stock", name: "wz-gun-stock", widget: "list", default: ["Short", "Long"] }
+        - { label: "Muzzle", name: "wz-gun-muzzle", widget: "list", default: ["Short", "Long"] }
+        - { label: "Barrel", name: "wz-gun-berrel", widget: "list", default: ["Short", "Long"] }
+        - { label: "Underberrel", name: "wz-gun-underberrel", widget: "list", default: ["Short", "Long"] }
+        - { label: "Tags", name: "tags", widget: "list", default: ["mw3", "wz"] }
+
+
+
+ 
+    - name: "mw3-meta-loadout"
+      label: "MW3 Meta Loadout"
+      folder: "src/mw3/meta-loadout"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      fields:
+        - { label: "Author", name: "mw3-loadout-author", widget: "list", default: ["TG TEAM"] }
+        - { label: "Gun Name", name: "mw3-gun-name", widget: "list", default: ["Striker", "MCW"] }
+        - { label: "Category", name: "mw3-gun-category", widget: "list", default: ["AR", "SMG", "LMG", "SNIPER", "BR", "SHOTGUN", "MELEEgh"] }
+        - { label: "Date", name: "mw3-loadout-date", widget: "datetime" }
+        - { label: "Featured Image", name: "mw3-gun-image", widget: "image" }
+        - { label: "Range", name: "mw3-gun-range", widget: "list", default: ["Short", "Long"] }
+        - { label: "Magazine", name: "mw3-gun-magazine", widget: "list", default: ["10", "25"] }
+        - { label: "Stock", name: "mw3-gun-stock", widget: "list", default: ["Short", "Long"] }
+        - { label: "Muzzle", name: "mw3-gun-muzzle", widget: "list", default: ["Short", "Long"] }
+        - { label: "Barrel", name: "mw3-gun-berrel", widget: "list", default: ["Short", "Long"] }
+        - { label: "Underberrel", name: "mw3-gun-underberrel", widget: "list", default: ["Short", "Long"] }
+        - { label: "Tags", name: "tags", widget: "list", default: ["mw3", "wz"] }
+        

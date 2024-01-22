@@ -5,7 +5,7 @@ media_folder: "public/assets/images"
 public_foler: "/assets/images"
 collections: 
     - name: "news"
-      label: "News"
+      label: "news"
       folder: "src/news/articles"
       create: true
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -18,39 +18,32 @@ collections:
         - { label: "Featured Image", name: "image", widget: "image" }
         - { label: "Image caption", name: "imageAlt", widget: "string" }
         - { label: "Body", name: "body", widget: "markdown" }
-
-
- 
     - name: "wz-meta-loadout"
       label: "WZ Meta Loadout"
-      folder: "src/wz/meta-loadout"
+      folder: "src/wz/meta-loadout/meta-loadout-config"
       create: true
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
       fields:
-        - { label: "Author", name: "wz-loadout-author", widget: "list", default: ["TG TEAM"] }
-        - { label: "Gun Name", name: "title", widget: "list", default: ["Striker", "MCW"] }
-        - { label: "Category", name: "wz-gun-category", widget: "list", default: ["AR", "SMG", "LMG", "SNIPER", "BR", "SHOTGUN", "MELEEgh"] }
-        - { label: "Date", name: "wz-loadout-date", widget: "datetime" }
-        - { label: "Featured Image", name: "wz-gun-image", widget: "image" }
-        - { label: "Range", name: "wz-gun-range", widget: "list", default: ["Short", "Long"] }
-        - { label: "Magazine", name: "wz-gun-magazine", widget: "list", default: ["10", "25"] }
-        - { label: "Stock", name: "wz-gun-stock", widget: "list", default: ["Short", "Long"] }
-        - { label: "Muzzle", name: "wz-gun-muzzle", widget: "list", default: ["Short", "Long"] }
-        - { label: "Barrel", name: "wz-gun-berrel", widget: "list", default: ["Short", "Long"] }
-        - { label: "Underberrel", name: "wz-gun-underberrel", widget: "list", default: ["Short", "Long"] }
-        - { label: "Tags", name: "tags", widget: "list", default: ["mw3", "wz"] }
-
-
-
- 
+        - { label: "wz-loadout-author", name: "author", widget: "list", default: ["TG TEAM"] }
+        - { label: "wz-loadout-gun-name", name: "title", widget: "list", default: ["Striker", "MCW"] }
+        - { label: "wz-loadout-Category", name: "wz-gun-category", widget: "list", default: ["AR", "SMG", "LMG", "SNIPER", "BR", "SHOTGUN", "MELEEgh"] }
+        - { label: "Publish Date", name: "date", widget: "datetime",  picker_utc: false }
+        - { label: "wz-loadout-featured-image", name: "image", widget: "image" }
+        - { label: "WZ Loadout Range", name: "range", widget: "select", options: ["Short", "Long"], default: ["Short"] }
+        - { label: "wz-loadout-Magazine", name: "magazine", widget: "number", default: ["25"] }
+        - { label: "wz-loadout-Stock", name: "stock", widget: "list", default: ["Merc Stock", "Bruen Stock"] }
+        - { label: "wz-loadout-Muzzle", name: "muzzle", widget: "list", default: ["Suppressor", "Bore"] }
+        - { label: "wz-loadout-Barrel", name: "barrel", widget: "list", default: ["Short Barrel", "Long Barrel"] }
+        - { label: "wz-loadout-Underbarrel", name: "underbarrel", widget: "list", default: ["Merc Grip", "VX Pineapple Grip"] }
+        
     - name: "mw3-meta-loadout"
       label: "MW3 Meta Loadout"
       folder: "src/mw3/meta-loadout"
       create: true
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
       fields:
-        - { label: "Author", name: "mw3-loadout-author", widget: "list", default: ["TG TEAM"] }
-        - { label: "Gun Name", name: "mw3-gun-name", widget: "list", default: ["Striker", "MCW"] }
+        - { label: "mw3-loadout-author", name: "author", widget: "list", default: ["TG TEAM"] }
+        - { label: "mw3-loadout-gun-name", name: "title", widget: "list", default: ["Striker", "MCW"] }
         - { label: "Category", name: "mw3-gun-category", widget: "list", default: ["AR", "SMG", "LMG", "SNIPER", "BR", "SHOTGUN", "MELEEgh"] }
         - { label: "Date", name: "mw3-loadout-date", widget: "datetime" }
         - { label: "Featured Image", name: "mw3-gun-image", widget: "image" }
@@ -60,5 +53,5 @@ collections:
         - { label: "Muzzle", name: "mw3-gun-muzzle", widget: "list", default: ["Short", "Long"] }
         - { label: "Barrel", name: "mw3-gun-berrel", widget: "list", default: ["Short", "Long"] }
         - { label: "Underberrel", name: "mw3-gun-underberrel", widget: "list", default: ["Short", "Long"] }
-        - { label: "Tags", name: "tags", widget: "list", default: ["mw3", "wz"] }
+        - { label: "Tags", name: "tags", widget: "list", default: ["mw3"] }
         

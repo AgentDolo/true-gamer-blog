@@ -1,19 +1,21 @@
 <li>
-      <wz-meta-loadouts class="snippet">
-        <p class="snippet__wz-loadout-author"><spa>{{ collections.mw3-meta-loadout.data.wz-loadout-author }}</span></p>
-        <h3 class="snippet__title"><a href="{{ a.url }}">{{ news.data.mw3-loadout-author }}</a></h3>
-        <p class="snippet__wz-gun-name">{{ collections.mw3-meta-loadout.data.mw3-gun-name }}</p>
-        <p class="snippet__wz-gun-category">{{ collections['wz-meta-loadout'].data['wz-gun-category'] }}</p>
-        <p class="snippet__wz-loadout-date"><span>{{ collections.mw3-meta-loadout.data.mw3-loadout-date | postDate }}</span></p>
-        <img src="{{ collections['wz-meta-loadout'].data['image'] }}" alt="{{ collections['wz-meta-loadout'].data['imageAlt'] }}" class="snippet__image">
-        <p class="snippet__wz-gun-range">{{ collections['wz-meta-loadout'].data['wz-gun-range'] }}</p>
-        <p class="snippet__wz-gun-magazine">{{ collections['wz-meta-loadout'].data['wz-gun-magazine'] }}</p>
-        <p class="snippet__wz-gun-stock">{{ collections['wz-meta-loadout'].data['wz-gun-stock'] }}</p>
-        <p class="snippet__wz-gun-muzzle">{{ collections['wz-meta-loadout'].data['wz-gun-muzzle'] }}</p>
-        <p class="snippet__wz-gun-barrel">{{ collections['wz-meta-loadout'].data['wz-gun-barrel'] }}</p>
-        <p class="snippet__wz-gun-underbarrel">{{ collections['wz-meta-loadout'].data['wz-gun-underbarrel'] }}</p>
-        <a href="{{ collections.wz-meta-loadout.url }}" class="btn btn--primary">SHOW DETAILS</a>
-      </wz-meta-loadouts>
+      <wz-meta-loadout class="snippet">
+        <p class="snippet__wz-loadout-author"><span><p6>AUTHOR: </p6>{{ post.data.author }}</span></p>
+        <p class="snippet__wz-gun-name"><span>{{ post.data.title }}</span></p>
+        <p class="snippet__wz-gun-category">{{ post.data.category }}</span></p>
+        <p class="snippet__wz-gun-range"><span><p6>RANGE: </p6>{{ post.data.range }}</span></p>
+        <p class="snippet__wz-gun-magazine"><p6>MAGAZINE: </p6>{{ post.data.magazine }}</p>
+        <p class="snippet__wz-gun-stock"><p6>STOCK: </p6>{{ post.data.stock}}</p>
+        <p class="snippet__wz-gun-muzzle"><p6>MUZZEL: </p6>{{ post.data.muzzle }}</p>
+        <p class="snippet__wz-gun-barrel"><p6>BARREL: </p6>{{ post.data.barrel }}</p>
+        <p class="snippet__wz-gun-underbarrel"><p6>UNDERBARREL: </p6>{{ post.data.underbarrel }}</p>
+        <p class="snippet__wz-loadout-date"><span><p6>UPDATED: </p6>{{ post.data.date | postDate }}</span></p>
+        <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="snippet__image">
+        <button class="toggle-details-btn">Show Details</button>
+        
+        
+        
+      </wz-meta-loadout>
 </li>
     
      

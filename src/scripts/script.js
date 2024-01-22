@@ -1,3 +1,23 @@
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleDetailsBtn = document.querySelector('.toggle-details-btn');
+  const wzLoadoutSnippet = document.querySelector('.snippet');
+
+  toggleDetailsBtn.addEventListener('click', function () {
+    wzLoadoutSnippet.classList.toggle('show-details');
+    toggleDetailsBtn.textContent = wzLoadoutSnippet.classList.contains('show-details') ? 'Hide Details' : 'Show Details';
+  });
+});
+
+
+
+
+
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
 const navLogo = document.querySelector('#navbar__logo');

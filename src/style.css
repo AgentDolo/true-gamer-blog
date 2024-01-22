@@ -1070,6 +1070,225 @@ h3.snippet__title  {
   }
 }
 
+
+
+
+/* //////////////////////
+  WZ Meta Loadout snippets
+  /////////////////////// */
+
+  #wz-loadout-content .snippet {
+    display: grid;
+    gap: 1em;
+    grid-template-areas:
+      "title"
+      "meta"
+      "body"
+      "button"
+      "image"; /* Move image to the last position */
+    background: linear-gradient(48deg, #0f0e0e, #484848, #6261D8, #383686); /* Gradient from dark gray to #6261D8 */
+    padding: 25px;
+    border-radius: 20px;
+    justify-items: center;
+    text-align: center;
+    font-size: var(--fs-300);
+    font-weight: var(--fw-300);
+  }
+
+  #wz-loadout-content .wz-loadout__list.flow {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  
+
+  #wz-loadout-content p {
+    color: var(--clr-primary-100) !important;
+    
+  }
+  
+  #wz-loadout-content p.snippet__wz-gun-name {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners are applied */
+    width: 100%;
+    padding: 5px;
+    
+  }
+  
+  #wz-loadout-content p.snippet__wz-loadout-author {
+    background-color: var(--clr-primary-200);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners are applied */
+    width: 100%;
+    padding: 5px;
+  }
+
+  wz-meta-loadout p.snippet__wz-gun-category {
+    background-color: var(--clr-primary-200);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners are applied */
+    width: 100%;
+    padding: 5px;
+  }
+
+  wz-meta-loadout p.snippet__wz-gun-range {
+    background-color: var(--clr-primary-200);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners are applied */
+    width: 100%;
+    padding: 5px;
+  }
+
+  wz-meta-loadout p.snippet__wz-gun-magazine {
+    background-color: var(--clr-primary-200);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners are applied */
+    width: 100%;
+    padding: 5px;
+  }
+
+  wz-meta-loadout p.snippet__wz-gun-stock {
+    background-color: var(--clr-primary-200);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners are applied */
+    width: 100%;
+    padding: 5px;
+  }
+
+  wz-meta-loadout p.snippet__wz-gun-muzzle {
+    background-color: var(--clr-primary-200);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners are applied */
+    width: 100%;
+    padding: 5px;
+  }
+
+  wz-meta-loadout p.snippet__wz-gun-barrel {
+    background-color: var(--clr-primary-200);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners are applied */
+    width: 100%;
+    padding: 5px;
+  }
+
+  wz-meta-loadout p.snippet__wz-gun-underbarrel {
+    background-color: var(--clr-primary-200);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners are applied */
+    width: 100%;
+    padding: 5px;
+  }
+
+  wz-meta-loadout p.snippet__wz-loadout-date {
+    background-color: var(--clr-primary-200);
+    border-radius: 10px;
+    overflow: hidden; /* Ensure rounded corners are applied */
+    width: 100%;
+    padding: 5px;
+  }
+
+
+  #wz-loadout-content .snippet__image {
+    grid-area: image;
+    width: 100%;
+    aspect-ratio: 4 / 1; /* Adjusted aspect ratio to 3:1 */
+    object-fit: cover;
+    border-radius: 10px;
+    padding: 1px;
+    box-shadow: none;
+  }
+  
+  #wz-loadout-content .snippet__wz-gun-name {
+    grid-area: title;
+    color: var(--clr-neutral-900);
+    font-size: var(--fs-300);
+  }
+  
+  #wz-loadout-content .snippet__wz-gun-name a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  #wz-loadout-content .snippet__wz-gun-name a:hover,
+  #wz-loadout-content .snippet__wz-gun-name a:focus {
+    color: var(--clr-primary-500);
+  }
+  
+  #wz-loadout-content .snippet__wz-gun-category {
+    grid-area: meta;
+    color: var(--clr-neutral-300);
+  }
+  
+  #wz-loadout-content .snippet__wz-loadout-date {
+    grid-area: body;
+    color: var(--clr-neutral-300);
+  }
+  
+  #wz-loadout-content .snippet__wz-loadout-date span {
+    color: var(--clr-neutral-400);
+    font-size: 12px;
+  }
+
+  #wz-loadout-content .toggle-details-btn {
+    border-radius: 10px;
+    border-color:  var(--clr-primary-500);
+    background-color: #00000000;
+    color: #00c7a2;
+  }
+
+  #wz-loadout-content .snippet p6 {
+    color: #00c7a2 !important;
+    font-weight: 900 !important;
+    align-items: left !important ;
+  }
+  
+  
+  
+ /* Initially hide the details */
+#wz-loadout-content .snippet .snippet__image,
+#wz-loadout-content .snippet .snippet__wz-gun-range,
+#wz-loadout-content .snippet .snippet__wz-gun-magazine,
+#wz-loadout-content .snippet .snippet__wz-gun-stock,
+#wz-loadout-content .snippet .snippet__wz-gun-muzzle,
+#wz-loadout-content .snippet .snippet__wz-gun-barrel,
+#wz-loadout-content .snippet .snippet__wz-gun-underbarrel {
+  display: none;
+}
+
+/* Show the details when the 'show-details' class is present */
+#wz-loadout-content .snippet.show-details .snippet__image,
+#wz-loadout-content .snippet.show-details .snippet__wz-gun-range,
+#wz-loadout-content .snippet.show-details .snippet__wz-gun-magazine,
+#wz-loadout-content .snippet.show-details .snippet__wz-gun-stock,
+#wz-loadout-content .snippet.show-details .snippet__wz-gun-muzzle,
+#wz-loadout-content .snippet.show-details .snippet__wz-gun-barrel,
+#wz-loadout-content .snippet.show-details .snippet__wz-gun-underbarrel {
+  display: block;
+}
+
+
+
+  
+  
+  @media (min-width: 45em) {
+    #wz-loadout-content .snippet {
+      grid-template-areas:
+        "title image"
+        "meta image"
+        "body image"
+        "button image";
+      grid-column-gap: 4em;
+      grid-template-columns: 1fr 40%;
+      grid-template-rows: min-content min-content min-content 1fr;
+    }
+  }
+  
+
+  
+
+  
+
+
 .btn {
   cursor: pointer;
   text-decoration: none;

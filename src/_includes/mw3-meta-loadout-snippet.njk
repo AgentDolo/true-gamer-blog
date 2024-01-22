@@ -1,7 +1,7 @@
 <li>
-      <wz-meta-loadouts class="snippet">
-        <p class="snippet__wz-loadout-author">{{ collections['wz-meta-loadout'].data['wz-loadout-author'] }}</p>
-        <p class="snippet__wz-gun-name">{{ collections['wz-meta-loadout'].data['wz-gun-name'] }}</p>
+      <mw3-meta-loadout class="snippet">
+        <p class="snippet__mw3-loadout-author"><span>{{ post.data.author }}</span></p>
+        <h3 class="snippet__mw3-loadout-title"><span>{{ post.data.title }}</span></h3>
         <p class="snippet__wz-gun-category">{{ collections['wz-meta-loadout'].data['wz-gun-category'] }}</p>
         <p class="snippet__wz-loadout-date"><span>{{ collections['wz-meta-loadout'].data['wz-loadout-date'] | postDate }}</span></p>
         <img src="{{ collections['wz-meta-loadout'].data['image'] }}" alt="{{ collections['wz-meta-loadout'].data['imageAlt'] }}" class="snippet__image">
@@ -12,7 +12,7 @@
         <p class="snippet__wz-gun-barrel">{{ collections['wz-meta-loadout'].data['wz-gun-barrel'] }}</p>
         <p class="snippet__wz-gun-underbarrel">{{ collections['wz-meta-loadout'].data['wz-gun-underbarrel'] }}</p>
         <a href="{{ collections['wz-meta-loadout'].url }}" class="btn btn--primary">SHOW DETAILS</a>
-      </wz-meta-loadouts>
+      </wz-meta-loadout>
 </li>
     
      

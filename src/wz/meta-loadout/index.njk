@@ -1,36 +1,30 @@
 ---
-title: WZ Meta Loadout
 layout: 'base.njk'
+ 
 ---
 
 
    <section class="hero">
   <div class="container flow">
       <div class="hero__content flow">
-        <h1 class="section-title">TGN <span class="purple-text">NEWS.</span></h1>
-        <p>Stay up to date with the latest Gaming news.</p>
+        <h1 class="section-title">WARZONE <span class="purple-text">LOADOUTS</span></h1>
         
-        <div class="flex-group">
-          <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
-          
-        </div>
+        
+        
       </div>
       
   </div>
 </section>
        
-<div id="blog-content" class="section container">
-<h1 class="section-title"></h1>
+<div id="wz-loadout-content" class="wz-loadout-section container">
+  <ul role="list" class="wz-loadout__list flow">
+    {%- for post in collections.wz | reverse-%}
+      {%- if loop.index > 1 -%} {# Skip the first item #}
+        {% include 'wz-meta-loadout-snippet.njk' %}
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>
 
-<ul role="list" class="articles__list flow">
-
-  {%- for post in collections.wz | reverse -%}
-    {% include 'wz-meta-loadout-snippet.njk' %}
-
-  {%- endfor %}
-
-</ul>
-
-  </div>
   
     

@@ -454,6 +454,9 @@ section,
   color: #ddd;
 }
 
+
+
+
 /* Additional styling as needed */
 
 
@@ -1077,23 +1080,128 @@ h3.snippet__title  {
   WZ Meta Loadout snippets
   /////////////////////// */
 
+
+/* Add the search filter styles to the Warzone Loadout snippet */
+#wz-loadout-content .default-filter {
+  margin-bottom: 20px; /* Adjust the spacing as needed */
+}
+
+#wz-loadout-content .default-filter__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #1f1f1f; /* Adjust the background color as needed */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#wz-loadout-content .search-by-gun {
+  display: flex;
+  align-items: center;
+}
+
+#wz-loadout-content .wz-text-field__input {
+  border: 1px solid #ddd; /* Adjust the border color as needed */
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#wz-loadout-content .default-filter__toggle-btn {
+  background-color: #2c2c2c; /* Adjust the background color as needed */
+  color: #fff; /* Adjust the text color as needed */
+  border: 1px solid #444; /* Adjust the border color as needed */
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#wz-loadout-content .default-filter__body {
+  display: none;
+}
+
+#wz-loadout-content .default-filter.show-filter .default-filter__body {
+  display: block;
+}
+
+#wz-loadout-content .default-filter__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#wz-loadout-content .default-filter__label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#wz-loadout-content .el-select-dropdown {
+  width: 100%;
+  max-width: 336px;
+}
+
+/* Add the styles for the grid layout */
+#wz-loadout-content .wz-loadout__list.flow {
+  display: grid;
+  gap: 20px; /* Adjust the gap as needed */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+
   #wz-loadout-content .snippet {
     display: grid;
     gap: 1em;
     grid-template-areas:
-      "title"
-      "meta"
-      "body"
-      "button"
-      "image"; /* Move image to the last position */
-    background: linear-gradient(48deg, #0f0e0e, #484848, #6261D8, #383686); /* Gradient from dark gray to #6261D8 */
-    padding: 25px;
+      "gunName gunName"
+      "meta meta"
+      "tier authorBody"
+      "empty button"
+      "image image"
+      "range range"
+      "magazine magazine"
+      "stock stock"
+      "muzzle muzzle"
+      "barrel barrel"
+      "underBarrel underBarrel";
+      
+      grid-template-columns: 1fr 50%;
+      grid-template-rows: min-content min-content min-content ;
+    /* Move image to the last position */
+    background: linear-gradient(48deg, #06060c, #26254a, #373478, #383686 , #383686); /* Gradient from dark gray to #6261D8 */
+    padding: 20px;
+    
     border-radius: 20px;
     justify-items: center;
-    text-align: center;
-    font-size: var(--fs-300);
+    text-align: left;
+    font-size: 13px;
     font-weight: var(--fw-300);
   }
+  
+
+@media (min-width: 45em) {
+  #wz-loadout-content .snippet {
+      grid-template-areas:
+          "title image"
+          "meta image"
+          "body image"
+          "button image";
+      grid-column-gap: 4em;
+      grid-template-columns: 1fr 40%; /* Two equal columns */
+      grid-template-rows: min-content min-content min-content 1fr;
+  }
+
+ /* Add an empty area named "empty" */
+.empty {
+  grid-area: empty;
+}
+
+
+
+}
+
+
+  
+  
 
   #wz-loadout-content .wz-loadout__list.flow {
     padding-top: 10rem;
@@ -1101,26 +1209,63 @@ h3.snippet__title  {
   }
   
 
-  #wz-loadout-content p {
+  #wz-loadout-content  p {
     color: var(--clr-primary-100) !important;
-    
+    padding-left: 10px;
   }
+
+  
   
   #wz-loadout-content p.snippet__wz-gun-name {
     background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden; /* Ensure rounded corners are applied */
     width: 100%;
-    padding: 5px;
-    
+    padding: 3px;
+    padding-left: 10px;
   }
+
+  #wz-loadout-content p.snippet__weapon-tier {
+    background: linear-gradient(48deg, #ff004c, #ff0055, #ff006a, #ff009d , #e600ff);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    padding: 3px;
+    color: var(--clr-primary-200) !important;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center;
+}
+
+
+
+  
+
+
+
+
+
+
+
+
+
   
   #wz-loadout-content p.snippet__wz-loadout-author {
-    background-color: var(--clr-primary-200);
+    font-size: 10px;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 10px;
     overflow: hidden; /* Ensure rounded corners are applied */
     width: 100%;
-    padding: 5px;
+    padding: 0px;
+    
+  }
+
+  #wz-loadout-content p.snippet__wz-loadout-date {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    
+    
   }
 
   wz-meta-loadout p.snippet__wz-gun-category {
@@ -1128,7 +1273,7 @@ h3.snippet__title  {
     border-radius: 10px;
     overflow: hidden; /* Ensure rounded corners are applied */
     width: 100%;
-    padding: 5px;
+    padding: 3px;
   }
 
   wz-meta-loadout p.snippet__wz-gun-range {
@@ -1136,7 +1281,7 @@ h3.snippet__title  {
     border-radius: 10px;
     overflow: hidden; /* Ensure rounded corners are applied */
     width: 100%;
-    padding: 5px;
+    padding: 3px;
   }
 
   wz-meta-loadout p.snippet__wz-gun-magazine {
@@ -1144,15 +1289,15 @@ h3.snippet__title  {
     border-radius: 10px;
     overflow: hidden; /* Ensure rounded corners are applied */
     width: 100%;
-    padding: 5px;
+    padding: 3px;
   }
 
   wz-meta-loadout p.snippet__wz-gun-stock {
     background-color: var(--clr-primary-200);
     border-radius: 10px;
-    overflow: hidden; /* Ensure rounded corners are applied */
+    overflow: hidden; /* Ensure rounded corners are applied */  
     width: 100%;
-    padding: 5px;
+    padding: 3px;
   }
 
   wz-meta-loadout p.snippet__wz-gun-muzzle {
@@ -1160,7 +1305,7 @@ h3.snippet__title  {
     border-radius: 10px;
     overflow: hidden; /* Ensure rounded corners are applied */
     width: 100%;
-    padding: 5px;
+    padding: 3px;
   }
 
   wz-meta-loadout p.snippet__wz-gun-barrel {
@@ -1168,7 +1313,7 @@ h3.snippet__title  {
     border-radius: 10px;
     overflow: hidden; /* Ensure rounded corners are applied */
     width: 100%;
-    padding: 5px;
+    padding: 3px;
   }
 
   wz-meta-loadout p.snippet__wz-gun-underbarrel {
@@ -1176,7 +1321,7 @@ h3.snippet__title  {
     border-radius: 10px;
     overflow: hidden; /* Ensure rounded corners are applied */
     width: 100%;
-    padding: 5px;
+    padding: 3px;
   }
 
   wz-meta-loadout p.snippet__wz-loadout-date {
@@ -1184,7 +1329,7 @@ h3.snippet__title  {
     border-radius: 10px;
     overflow: hidden; /* Ensure rounded corners are applied */
     width: 100%;
-    padding: 5px;
+    padding: 3px;
   }
 
 
@@ -1199,7 +1344,7 @@ h3.snippet__title  {
   }
   
   #wz-loadout-content .snippet__wz-gun-name {
-    grid-area: title;
+    grid-area: gunName;
     color: var(--clr-neutral-900);
     font-size: var(--fs-300);
   }
@@ -1213,6 +1358,11 @@ h3.snippet__title  {
   #wz-loadout-content .snippet__wz-gun-name a:focus {
     color: var(--clr-primary-500);
   }
+
+  #wz-loadout-content .snippet__weapon-tier {
+    grid-area: tier;
+    color: var(--clr-neutral-300);
+  }
   
   #wz-loadout-content .snippet__wz-gun-category {
     grid-area: meta;
@@ -1220,27 +1370,82 @@ h3.snippet__title  {
   }
   
   #wz-loadout-content .snippet__wz-loadout-date {
-    grid-area: body;
+    grid-area: authorBody;
     color: var(--clr-neutral-300);
+    
+  }
+  #wz-loadout-content .snippet__wz-loadout-author {
+    grid-area: authorBody;
   }
   
   #wz-loadout-content .snippet__wz-loadout-date span {
-    color: var(--clr-neutral-400);
-    font-size: 12px;
+    color: var(--clr-neutral-100);
+    font-size: 10px;
+    
   }
 
-  #wz-loadout-content .toggle-details-btn {
-    border-radius: 10px;
-    border-color:  var(--clr-primary-500);
-    background-color: #00000000;
-    color: #00c7a2;
+  wz-meta-loadout .snippet__wz-gun-range {
+    grid-area: range;
   }
+
+  wz-meta-loadout .snippet__wz-gun-magazine {
+    grid-area: magazine;
+  }
+
+  wz-meta-loadout .snippet__wz-gun-stock {
+    grid-area: stock;
+  }
+
+  wz-meta-loadout .snippet__wz-gun-muzzle {
+    grid-area: muzzle;
+  }
+
+  wz-meta-loadout .snippet__wz-gun-barrel {
+    grid-area: barrel;
+  }
+
+  wz-meta-loadout .snippet__wz-gun-underbarrel {
+    grid-area: underBarrel;
+  }
+
+  wz-meta-loadout snippet__weapon-tier {
+    grid-area: tier;
+  }
+
+
+  #wz-loadout-content .toggle-details-btn {
+    grid-area: button;
+    border-radius: 10px;
+    border-color: var(--clr-primary-500);
+    background-color: #ffffff;
+    color: var(--clr-primary-100);
+    padding: 10px 15px; /* 10px top/bottom, 15px left/right */
+    transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+#wz-loadout-content .toggle-details-btn:active,
+#wz-loadout-content .snippet.show-details .toggle-details-btn {
+    grid-area: button;
+    border-radius: 10px;
+    border-color: var(--clr-primary-200);
+    background-color: #ffffff00;
+    color: var(--clr-primary-200);
+    padding: 5px 15px; /* 10px top/bottom, 15px left/right */
+    transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+
+
+  
 
   #wz-loadout-content .snippet p6 {
     color: #00c7a2 !important;
     font-weight: 900 !important;
-    align-items: left !important ;
+    
+    
   }
+
+
   
   
   
@@ -1266,7 +1471,10 @@ h3.snippet__title  {
   display: block;
 }
 
-
+/* Adjust the height of .snippet when details are not present */
+#wz-loadout-content .snippet:not(.show-details) {
+  height: 220px; /* Adjust the height as needed */
+}
 
   
   

@@ -1,8 +1,13 @@
+
+
+
 <li>
+  
       <wz-meta-loadout class="snippet">
         <p class="snippet__wz-loadout-author"><span><p6>AUTHOR: </p6>{{ post.data.author }}</span></p>
         <p class="snippet__wz-gun-name"><span>{{ post.data.title }}</span></p>
-        <p class="snippet__wz-gun-category">{{ post.data.category }}</span></p>
+        <p class="snippet__wz-gun-category"><span>{{ post.data.category }}</span></p>
+        <p class="snippet__weapon-tier"><span>{{ post.data.tier }}</span></p>
         <p class="snippet__wz-gun-range"><span><p6>RANGE: </p6>{{ post.data.range }}</span></p>
         <p class="snippet__wz-gun-magazine"><p6>MAGAZINE: </p6>{{ post.data.magazine }}</p>
         <p class="snippet__wz-gun-stock"><p6>STOCK: </p6>{{ post.data.stock}}</p>
@@ -11,7 +16,7 @@
         <p class="snippet__wz-gun-underbarrel"><p6>UNDERBARREL: </p6>{{ post.data.underbarrel }}</p>
         <p class="snippet__wz-loadout-date"><span><p6>UPDATED: </p6>{{ post.data.date | postDate }}</span></p>
         <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="snippet__image">
-        <button class="toggle-details-btn">Show Details</button>
+        <button class="toggle-details-btn">SHOW DETAILS</button>
         
         
         

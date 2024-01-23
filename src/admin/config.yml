@@ -35,7 +35,8 @@ collections:
         - { label: "wz-loadout-Muzzle", name: "muzzle", widget: "list", default: ["Suppressor", "Bore"] }
         - { label: "wz-loadout-Barrel", name: "barrel", widget: "list", default: ["Short Barrel", "Long Barrel"] }
         - { label: "wz-loadout-Underbarrel", name: "underbarrel", widget: "list", default: ["Merc Grip", "VX Pineapple Grip"] }
-        
+        - { label: "weapon-tier", name: "tier", widget: "list", default: ["META", "COMPETITIVE"] }
+        - { label: "Tags", name: "tags", widget: "list", default: ["wz"] }
     - name: "mw3-meta-loadout"
       label: "MW3 Meta Loadout"
       folder: "src/mw3/meta-loadout"

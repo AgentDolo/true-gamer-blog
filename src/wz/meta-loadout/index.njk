@@ -1,22 +1,136 @@
 ---
 layout: 'base.njk'
- 
 ---
 
-
-   <section class="hero">
+<section class="hero">
   <div class="container flow">
-      <div class="hero__content flow">
-        <h1 class="section-title">WARZONE <span class="purple-text">LOADOUTS</span></h1>
-        
-        
-        
-      </div>
-      
+    <div class="hero__content flow">
+      <h1 class="section-title">WARZONE <span class="purple-text">LOADOUTS</span></h1>
+    </div>
   </div>
 </section>
-       
+
 <div id="wz-loadout-content" class="wz-loadout-section container">
+  <div class="default-filter">
+    <div class="default-filter__header">
+      <div class="search-by-gun">
+        <div class="default-filter__label">SEARCH GUN</div>
+        <div class="wz-control-group">
+          <!---->
+          <div class="wz-text-field">
+            <!---->
+            <!---->
+            <input type="search" id="searchInput" class="wz-text-field__input">
+
+            <!---->
+          </div>
+          <!---->
+        </div>
+      </div>
+      <button type="button" class="default-filter__toggle-btn wzh-button wzh-button__default">
+        <!---->
+        <div class="wzh-button__content"><i class="icon-filter"></i> <span>Filter</span></div>
+      </button>
+    </div>
+    <div class="default-filter__body" style="">
+      <div class="default-filter__inner">
+        <div>
+          <div class="default-filter__label">
+            SELECT RANGE
+          </div>
+          <div placeholder="All" multiple="multiple" class="wz-control-group">
+            <!---->
+            <div class="wz-control-group__inner">
+              <div class="el-select wz-select-control">
+                <div class="el-select__tags" style="width: 100%; max-width: 336px;">
+                  <!----><span></span><!---->
+                </div>
+                <div class="el-input el-input--suffix">
+                  <!----><input type="text" readonly="readonly" autocomplete="off" placeholder="All"
+                    class="el-input__inner" style="height: 40px;">
+                  <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i
+                        class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!---->
+                </div>
+                <div class="el-select-dropdown el-popper is-multiple" style="display: none; min-width: 368px;">
+                  <div class="el-scrollbar" style="">
+                    <div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;">
+                      <ul class="el-scrollbar__view el-select-dropdown__list">
+                        <!---->
+                        <li class="el-select-dropdown__item"><span>Long range</span></li>
+                        <li class="el-select-dropdown__item"><span>Close range</span></li>
+                        <li class="el-select-dropdown__item"><span>All ranges</span></li>
+                        <li class="el-select-dropdown__item"><span>Sniper support range</span></li>
+                        <li class="el-select-dropdown__item"><span>Akimbo range</span></li>
+                        <li class="el-select-dropdown__item"><span>Hip fire</span></li>
+                      </ul>
+                    </div>
+                    <div class="el-scrollbar__bar is-horizontal">
+                      <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                    </div>
+                    <div class="el-scrollbar__bar is-vertical">
+                      <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                    </div>
+                  </div>
+                  <!---->
+                </div>
+              </div>
+              <!---->
+            </div>
+            <!---->
+          </div>
+        </div>
+        <div>
+          <div class="default-filter__label">
+            SELECT TYPE
+          </div>
+          <div placeholder="All" multiple="multiple" filterable="" class="wz-control-group">
+            <!---->
+            <div class="wz-control-group__inner">
+              <div class="el-select wz-select-control">
+                <div class="el-select__tags" style="width: 100%; max-width: 336px;">
+                  <!----><span></span><input type="text" autocomplete="off" class="el-select__input"
+                    style="flex-grow: 1; width: 0.0595238%; max-width: 326px;">
+                </div>
+                <div class="el-input el-input--suffix">
+                  <!----><input tabindex="-1" type="text" readonly="readonly" autocomplete="off" placeholder="All"
+                    class="el-input__inner" style="height: 40px;">
+                  <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i
+                        class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!---->
+                </div>
+                <div class="el-select-dropdown el-popper is-multiple" style="display: none; min-width: 368px;">
+                  <div class="el-scrollbar" style="">
+                    <div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;">
+                      <ul class="el-scrollbar__view el-select-dropdown__list">
+                        <!---->
+                        <li class="el-select-dropdown__item"><span>AR</span></li>
+                        <li class="el-select-dropdown__item"><span>SMG</span></li>
+                        <li class="el-select-dropdown__item"><span>LMG</span></li>
+                        <li class="el-select-dropdown__item"><span>SNIPER</span></li>
+                        <li class="el-select-dropdown__item"><span>RIFLE</span></li>
+                        <li class="el-select-dropdown__item"><span>SHOTGUN</span></li>
+                        <li class="el-select-dropdown__item"><span>MELEE</span></li>
+                        <li class="el-select-dropdown__item"><span>B.RIFLES</span></li>
+                      </ul>
+                    </div>
+                    <div class="el-scrollbar__bar is-horizontal">
+                      <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                    </div>
+                    <div class="el-scrollbar__bar is-vertical">
+                      <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                    </div>
+                  </div>
+                  <!---->
+                </div>
+              </div>
+              <!---->
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <ul role="list" class="wz-loadout__list flow">
     {%- for post in collections.wz | reverse-%}
       {%- if loop.index > 1 -%} {# Skip the first item #}
@@ -26,5 +140,3 @@ layout: 'base.njk'
   </ul>
 </div>
 
-  
-    

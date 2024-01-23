@@ -1,18 +1,60 @@
 
+document.addEventListener('DOMContentLoaded', function () {
+  const searchInput = document.getElementById('searchInput');
+
+  searchInput.addEventListener('input', function () {
+    const searchText = searchInput.value.toLowerCase();
+    filterLoadouts(searchText);
+  });
+
+  function filterLoadouts(searchText) {
+    const wzLoadouts = document.querySelectorAll('.snippet');
+
+    wzLoadouts.forEach((wzLoadout) => {
+      const title = wzLoadout.querySelector('.snippet__wz-gun-name').textContent.toLowerCase();
+      const author = wzLoadout.querySelector('.snippet__wz-loadout-author').textContent.toLowerCase();
+
+      // Logic to filter loadouts based on searchText
+      if (title.includes(searchText) || author.includes(searchText)) {
+        wzLoadout.style.display = 'block'; // Show the loadout
+      } else {
+        wzLoadout.style.display = 'none'; // Hide the loadout
+      }
+    });
+
+    // Adjust the styling of the grid after filtering
+    adjustGridStyling();
+  }
+
+  // Function to adjust grid styling
+  function adjustGridStyling() {
+    const wzLoadoutContent = document.getElementById('wz-loadout-content');
+    wzLoadoutContent.classList.remove('search-active');
+
+    // Check if any loadouts are displayed
+    const displayedLoadouts = document.querySelectorAll('.snippet[style="display: block;"]');
+    if (displayedLoadouts.length > 0) {
+      wzLoadoutContent.classList.add('search-active');
+    }
+  }
+});
 
 
 
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const toggleDetailsBtn = document.querySelector('.toggle-details-btn');
-  const wzLoadoutSnippet = document.querySelector('.snippet');
+  const toggleDetailsBtns = document.querySelectorAll('.toggle-details-btn');
 
-  toggleDetailsBtn.addEventListener('click', function () {
-    wzLoadoutSnippet.classList.toggle('show-details');
-    toggleDetailsBtn.textContent = wzLoadoutSnippet.classList.contains('show-details') ? 'Hide Details' : 'Show Details';
+  toggleDetailsBtns.forEach((toggleDetailsBtn) => {
+    toggleDetailsBtn.addEventListener('click', function () {
+      const wzLoadoutSnippet = toggleDetailsBtn.closest('.snippet');
+      wzLoadoutSnippet.classList.toggle('show-details');
+      toggleDetailsBtn.textContent = wzLoadoutSnippet.classList.contains('show-details') ? 'HIDE DETAILS' : 'SHOW DETAILS';
+    });
   });
 });
+
 
 
 

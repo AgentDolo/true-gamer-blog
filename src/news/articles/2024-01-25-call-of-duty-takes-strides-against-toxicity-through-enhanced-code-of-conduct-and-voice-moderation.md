@@ -8,11 +8,11 @@ description: >-
   involves an update to the Call of Duty Code of Conduct and insights from the
   voice moderation beta.
 author: TDN TEAM
-date: '2024-01-25T00:00:00-05:00'
+date: 2024-01-25
 tags:
   - articles
   - news
-image: /public/assets/images/mwiii-wz-anti-cheat-tout.jpg
+image: /assets/images/mwiii-wz-anti-cheat-tout.jpg
 imageAlt: mwiii-wz-anti-cheat
 ---
 Code of Conduct Update:

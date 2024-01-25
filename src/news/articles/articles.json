@@ -1,6 +1,6 @@
 {
     "layout": "article.njk",
-    "tags": "news"
+    "tags": ["news", "articles"]
 
 
 

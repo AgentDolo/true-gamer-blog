@@ -7,19 +7,22 @@ layout: 'base.njk'
    <section class="hero">
   <div class="container flow">
       <div class="hero__content flow">
-        <h1 class="section-title">TGN <span class="purple-text">NEWS.</span></h1>
-        <p>Stay up to date with the latest Gaming news.</p>
+        <h1 class="section-title">COMING <span class="purple-text">SOON!</span></h1>
+        <p>Follow us on all platforms below.</p>
         
+        {#
         <div class="flex-group">
           <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
           
         </div>
+        #}
       </div>
       
   </div>
 </section>
-       
-<section id="featured-articles" class="featured-articles">
+
+{#      
+<section id="featured-articles-wz" class="featured-articles">
   <div class="container flow">
     <h2 class="section-title text-left">NEWS</h2>
     
@@ -27,7 +30,7 @@ layout: 'base.njk'
     <div class="swiper-container">
       <div class="swiper-wrapper">
 
-        {%- for post in collections.articles | reverse -%}
+        {%- for post in collections.featured | reverse -%}
           <div class="swiper-slide">
             {% include 'article-snippet.njk' %}
           </div>
@@ -42,7 +45,7 @@ layout: 'base.njk'
     </div>
   </div>
 </section>
-  
+  #}
     
   
     

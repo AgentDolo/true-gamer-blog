@@ -34,9 +34,24 @@ layout: 'base.njk'
     </div>
 
     <div class="games-list" id="games-list">
-      <!-- Game items will be dynamically added here using JavaScript -->
+  <!-- Game items will be dynamically added here using JavaScript -->
+  <!-- Assuming you are using a loop to render gamesData -->
+  {% for game in gamesData %}
+    <div class="game">
+      <a href="{{ game.link }}"> <!-- Add the dynamic hyperlink here -->
+        <div class="game-image">
+          <img src="{{ game.imageUrl }}" alt="{{ game.name }}">
+        </div>
+      </a>
+      <div class="game-info">
+        <h3>{{ game.name }}</h3>
+        <p>{{ game.description }}</p>
+      </div>
     </div>
-  </div>
+  {% endfor %}
+</div>
+
+
 </section>
 
 </section>

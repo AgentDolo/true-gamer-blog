@@ -1,4 +1,26 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('searchInput');
 
@@ -120,14 +142,15 @@ navLogo.addEventListener('click', hideMobileMenu);
 
 // Assuming you have an array of games data
 const gamesData = [
-  { name: 'MW3', description: 'Description of MW3', imageUrl: 'assets/games/MW3.jpg' },
-  { name: 'Fortnite', description: 'Description of Fortnite', imageUrl: 'assets/games/Fortnite.webp' },
-  { name: 'Diablo', description: 'Description of Diablo', imageUrl: 'assets/games/Diablo.jpg' },
-  { name: 'Fifa', description: 'Description of Fifa', imageUrl: 'assets/games/Fifa.jpeg' },
-  { name: 'NBA 2K23', description: 'Description of NBA 2K23', imageUrl: 'assets/games/NBA-2K.jpg' },
-  { name: 'Rocket League', description: 'Description of Rocket League', imageUrl: 'assets/games/Rocket-League.jpg' },
-  { name: 'CS:GO', description: 'Description of CS:GO', imageUrl: 'assets/games/CS-Go.jpg' },
-  { name: 'Madden 23', description: 'Description of Madden 23', imageUrl: 'assets/games/Madden-23.jpg' },
+  { name: 'WZ', description: 'Description of WZ', imageUrl: 'assets/games/WZ.jpg', link: '/wz', status: 'soon' },
+  { name: 'MW3', description: 'Description of MW3', imageUrl: 'assets/games/MW3.jpg', link: '/mw3'},
+  { name: 'Fortnite', description: 'Description of Fortnite', imageUrl: 'assets/games/Fortnite.webp', link: 'javascript:void(0)' },
+  { name: 'Diablo', description: 'Description of Diablo', imageUrl: 'assets/games/Diablo.jpg', link: 'javascript:void(0)' },
+  { name: 'FC 24', description: 'Description of Fifa', imageUrl: 'assets/games/Fifa.jpeg', link: 'javascript:void(0)' },
+  { name: 'NBA 2K24', description: 'Description of NBA 2K23', imageUrl: 'assets/games/NBA-2K.jpg', link: 'javascript:void(0)' },
+  { name: 'Rocket League', description: 'Description of Rocket League', imageUrl: 'assets/games/Rocket-League.jpg', link: 'javascript:void(0)' },
+  { name: 'CS:GO', description: 'Description of CS:GO', imageUrl: 'assets/games/CS-Go.jpg', link: 'javascript:void(0)' },
+  { name: 'Madden 24', description: 'Description of Madden 23', imageUrl: 'assets/games/Madden-23.jpg', link: 'javascript:void(0)' },
 ];
 
 // ... (previous code)
@@ -139,17 +162,26 @@ function renderGames() {
 
     const gameImage = document.createElement('div');
     gameImage.classList.add('game-image');
+    const anchor = document.createElement('a');
+    anchor.href = game.link;
     const image = document.createElement('img');
     image.src = game.imageUrl;
     image.alt = game.name;
-    gameImage.appendChild(image);
+    anchor.appendChild(image);
+    gameImage.appendChild(anchor);
 
     // Overlay elements
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
-    const soonText = document.createElement('span');
-    soonText.innerHTML = 'COMING<br>SOON';
-    overlay.appendChild(soonText);
+
+    // Check the game status and set overlay text and background accordingly
+    if (game.status === 'soon') {
+      overlay.innerHTML = 'NEW!';
+      overlay.style.backgroundColor = 'var(--clr-primary-500)'; // Set the color for soon to be updated games
+    } else {
+      overlay.innerHTML = 'SOON!';
+      overlay.style.backgroundColor = 'var(--clr-primary-400)'; // Set the color for updated games
+    }
 
     gameImage.appendChild(overlay);
 
@@ -169,8 +201,11 @@ function renderGames() {
   });
 }
 
+
+
 // Initial render
 renderGames();
+
 
 // Implement infinite scroll logic here
 // You may need to load more game data as the user scrolls

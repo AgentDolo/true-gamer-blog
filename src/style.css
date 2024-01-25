@@ -289,18 +289,19 @@ section,
   height: 250px; /* Adjust the height as needed */
   overflow: hidden; 
   text-decoration: none;
-  
+  padding: 20px;
+  margin-left: -.6rem;
 }
 
 /* Optionally, adjust the styling for the slides */
 .swiper-slide {
-  background-color: #151416; /* Set background color if needed */
-  border: 1px solid ; /* Add a border for separation */
+  background: linear-gradient(180deg, #0b0a0e99, #1212156b, #17172199, #000000 , #000000); /* Set background color if needed */
+  border: 0px solid #000000 ; /* Add a border for separation */
   border-radius: 10px;
   box-sizing: border-box;
   width: 100%;
-  padding: 10px;
- 
+  padding: 2px;
+  
 }
 
 /* Remove li::marker from each slide in the Swiper container */
@@ -356,10 +357,10 @@ section,
   top: 0;
   right: 0;
   padding: 1px 5px 1px 5px;
-  background-color: #d93838fb;
+  background-color: var(--clr-primary-500);
   color: white;
-  font-size: 7px;
-  border: 2px solid #d93838fb;
+  font-size: 10px;
+  border: 2px solid var(--clr-neutral-200);
   z-index: 1;
   border-bottom-left-radius: 10px;
 }
@@ -374,6 +375,12 @@ section,
 
 
 
+/* For desktop devices with a minimum width of 768px */
+@media (min-width: 768px) {
+  .games-list {
+    grid-template-columns: repeat(auto-fill, minmax(calc(16.66% - 20px), 1fr)) !important; /* Adjust the width as needed */
+  }
+}
 
 
 
@@ -435,6 +442,7 @@ section,
   justify-content: space-between;
   align-items: center;
   color: #ddd;
+  display: none;
 }
 
 .headline h2{
@@ -461,6 +469,118 @@ section,
 
 
 
+/* Add this style to your existing CSS */
+.sublinks {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000;
+  z-index: 1;
+  width: 100%;
+}
+
+.dropdown:hover .sublinks {
+  display: block;
+}
+
+.sublinks li {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  list-style: none; /* Remove bullet points */
+}
+
+.sublinks a {
+  color: #fff; /* Set the color for sub-links */
+  text-decoration: none; /* Remove underline */
+  display: block;
+  padding: 10px;
+}
+
+.sublinks a:hover {
+  background-color: var(--clr-primary-500); /* Add a background color on hover */
+}
+
+/* Update your media query for non-mobile devices */
+@media screen and (min-width: 961px) {
+  .navbar__container {
+    height: 50px;
+    padding: 0 50px;
+  }
+
+  #navbar__logo {
+    font-size: 2rem;
+    padding-left: 0; /* Adjust padding as needed */
+  }
+
+  .navbar__menu {
+    display: flex;
+    position: relative;
+    opacity: 1;
+    top: 0;
+    background: transparent;
+    box-shadow: none;
+    height: auto;
+  }
+
+  .navbar__item {
+    height: 50px;
+    position: relative;
+  }
+
+  .navbar__links {
+    width: auto;
+    padding: 0 1rem;
+    font-size: 15px;
+  }
+
+  .navbar__btn {
+    padding: 0 0rem;
+  }
+
+  .button {
+    height: 50%;
+    width: 50%;
+  }
+
+  .navbar__toggle {
+    display: none;
+  }
+
+  #mobile-menu {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* For desktop devices with a minimum width of 768px */
+@media (min-width: 768px) {
+  .games-list {
+    grid-template-columns: repeat(auto-fill, minmax(calc(25% - 20px), 1fr)); /* Adjust the width as needed */
+  }
+
+  .swiper-container {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 600px; /* Set a max-width to control the size on larger screens */
+    height: 350px; /* Adjust the height as needed */
+    overflow: hidden; 
+    text-decoration: none;
+    padding: 10px;
+    
+    
+  }
+}
 
 
 
@@ -683,6 +803,8 @@ section,
 @media screen and (max-width: 960px) {
 
 
+
+
   .navbar__container {
     display: flex;
     justify-content: space-between;
@@ -827,7 +949,7 @@ section,
   /////////////////////// */
 
   .site-footer {
-    --logo-color: currentColor;
+    --logo-color: var(--clr-primary-500);
     padding: 1rem 0;
     padding-top: 0rem;
     color: var(--clr-neutral-100);
@@ -840,6 +962,7 @@ section,
     flex-wrap: nowrap;
     border-radius: 10px;
     border: 2px solid #161414;
+    
 
   }
 
@@ -936,7 +1059,7 @@ section,
 
 .featured-articles {
   background-color: #0B0A0E;
-  ;
+  
 }
 
 .articles__list {
@@ -994,7 +1117,7 @@ section,
   Article snippets
   /////////////////////// */
 
-.snippet {
+.snippet .article {
   display: grid;
   gap: 1em;
   grid-template-areas:
@@ -1003,6 +1126,8 @@ section,
     "meta"
     "body"
     "button";
+  
+    
 }
 
 .snippet__image {
@@ -1014,24 +1139,30 @@ section,
 }
 .snippet__title {
   grid-area: title;
+  padding: 10px;
 }
 
 .featured-articles p.snippet__body {
   color: black;
+  display: none;
+  padding: 10px;
 }
 
 h3.snippet__title  {
   color: rgb(255, 255, 255);
   font-size: var(--fs-300);
+  padding: 10px;
 }
 
 .featured-articles h3.snippet__title  {
   color: rgb(255, 255, 255);
+  padding: 10px;
 }
 
 .snippet__meta {
   grid-area: meta;
   color: var(--clr-neutral-300);
+  padding: 10px;
 }
 
 
@@ -1043,6 +1174,7 @@ h3.snippet__title  {
 
 .snippet .btn {
   grid-area: button;
+  display: none ;
 }
 
 .snippet__title {
@@ -1083,41 +1215,56 @@ h3.snippet__title  {
 
 /* Add the search filter styles to the Warzone Loadout snippet */
 #wz-loadout-content .default-filter {
-  margin-bottom: 20px; /* Adjust the spacing as needed */
+  margin-bottom: 5px;
+  margin-top: 5px; /* Adjust the spacing as needed */
 }
 
 #wz-loadout-content .default-filter__header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 10px;
-  background-color: #1f1f1f; /* Adjust the background color as needed */
+  background: linear-gradient(48deg, #06060c, #26254a, #373478, #383686 , #06060c); /* Adjust the background color as needed */
   border-radius: 10px;
   margin-bottom: 10px;
+  color: #000000;
+  font-size: medium;
+}
+
+#wz-loadout-content .meta-section-title  {
+  text-align: center;
+  color: var(--clr-neutral-100);
+  
+  font-size: medium;
 }
 
 #wz-loadout-content .search-by-gun {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 10px;
 }
 
 #wz-loadout-content .wz-text-field__input {
-  border: 1px solid #ddd; /* Adjust the border color as needed */
-  border-radius: 5px;
-  padding: 5px;
+  border: 1px solid #000000; /* Adjust the border color as needed */
+  border-radius: 15px;
+  padding: 1px 15px;
+  font-size: small;
 }
 
 #wz-loadout-content .default-filter__toggle-btn {
-  background-color: #2c2c2c; /* Adjust the background color as needed */
-  color: #fff; /* Adjust the text color as needed */
-  border: 1px solid #444; /* Adjust the border color as needed */
+  background-color: var(--clr-neutral-100); /* Adjust the background color as needed */
+  color: var(--clr-neutral-200); /* Adjust the text color as needed */
+  border: 1px solid #000000; /* Adjust the border color as needed */
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 1px 15px;
   cursor: pointer;
 }
 
 #wz-loadout-content .default-filter__body {
   display: none;
+  
 }
 
 #wz-loadout-content .default-filter.show-filter .default-filter__body {
@@ -1128,11 +1275,18 @@ h3.snippet__title  {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  background: linear-gradient(48deg, #06060c, #26254a, #373478, #383686 , #383686);
+  border-radius: 0px 0px 0px 15px;
+  padding: 10px 55px;
+  border-radius: 10px;
+  align-items: center;
 }
 
 #wz-loadout-content .default-filter__label {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: -10px;
+  color: var(--clr-neutral-200);
+  font-size: 14px;
 }
 
 #wz-loadout-content .el-select-dropdown {
@@ -1143,7 +1297,7 @@ h3.snippet__title  {
 /* Add the styles for the grid layout */
 #wz-loadout-content .wz-loadout__list.flow {
   display: grid;
-  gap: 20px; /* Adjust the gap as needed */
+  gap: 5px; /* Adjust the gap as needed */
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
@@ -1178,16 +1332,24 @@ h3.snippet__title  {
   }
   
 
-@media (min-width: 45em) {
+@media (min-width: 650px) {
   #wz-loadout-content .snippet {
       grid-template-areas:
-          "title image"
-          "meta image"
-          "body image"
-          "button image";
-      grid-column-gap: 4em;
-      grid-template-columns: 1fr 40%; /* Two equal columns */
-      grid-template-rows: min-content min-content min-content 1fr;
+      "gunName gunName"
+      "meta meta"
+      "tier authorBody"
+      "empty button"
+      "image image"
+      "range range"
+      "magazine magazine"
+      "stock stock"
+      "muzzle muzzle"
+      "barrel barrel"
+      "underBarrel underBarrel";;
+  }
+
+  .flow > *:where(:not(:first-child)) {
+    margin-top: 0px !important;
   }
 
  /* Add an empty area named "empty" */
@@ -1204,7 +1366,7 @@ h3.snippet__title  {
   
 
   #wz-loadout-content .wz-loadout__list.flow {
-    padding-top: 10rem;
+    padding-top: 0.5rem;
     padding-bottom: 10rem;
   }
   
@@ -1213,6 +1375,8 @@ h3.snippet__title  {
     color: var(--clr-primary-100) !important;
     padding-left: 10px;
   }
+
+  
 
   
   
@@ -1377,6 +1541,10 @@ h3.snippet__title  {
   #wz-loadout-content .snippet__wz-loadout-author {
     grid-area: authorBody;
   }
+
+  #wz-loadout-content .snippet__wz-loadout-author span {
+    color: var(--clr-neutral-100);
+  }
   
   #wz-loadout-content .snippet__wz-loadout-date span {
     color: var(--clr-neutral-100);
@@ -1478,18 +1646,7 @@ h3.snippet__title  {
 
   
   
-  @media (min-width: 45em) {
-    #wz-loadout-content .snippet {
-      grid-template-areas:
-        "title image"
-        "meta image"
-        "body image"
-        "button image";
-      grid-column-gap: 4em;
-      grid-template-columns: 1fr 40%;
-      grid-template-rows: min-content min-content min-content 1fr;
-    }
-  }
+ 
   
 
   

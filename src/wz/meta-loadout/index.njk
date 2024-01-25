@@ -14,13 +14,13 @@ layout: 'base.njk'
   <div class="default-filter">
     <div class="default-filter__header">
       <div class="search-by-gun">
-        <div class="default-filter__label">SEARCH GUN</div>
+        <div class="default-filter__label"></div>
         <div class="wz-control-group">
           <!---->
           <div class="wz-text-field">
             <!---->
             <!---->
-            <input type="search" id="searchInput" class="wz-text-field__input">
+            <input type="search" id="searchInput" placeholder="SEARCH GUN..." class="wz-text-field__input">
 
             <!---->
           </div>
@@ -130,6 +130,8 @@ layout: 'base.njk'
       </div>
     </div>
   </div>
+
+  <h2 class="meta-section-title">META</h2>
 
   <ul role="list" class="wz-loadout__list flow">
     {%- for post in collections.wz | reverse-%}

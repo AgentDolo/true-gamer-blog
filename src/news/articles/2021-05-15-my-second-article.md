@@ -2,7 +2,7 @@
 title: My Second Article
 author: Kevin Powell
 date: 2024-01-15
-tags: ["articles", "featured"]
+tags: ["news", "featured"]
 image: assets/images/article-2.jpg
 imageAlt: This is a test
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?

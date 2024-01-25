@@ -1,9 +1,9 @@
 ---
-title: My Fifth Article
-author: Kevin Powell
+title: TEST
+author: TDN TEAM
 date: 2021-06-15
-tags: ["articles", "featured"]
-image: /assets/blog/article-5.jpg
+tags: ["news", "featured"]
+image: /assets/images/article-5.jpg
 imageAlt: This is a test
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?
 ---

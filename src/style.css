@@ -471,35 +471,43 @@ section,
 
 /* Add this style to your existing CSS */
 .sublinks {
-  display: none;
-  position: absolute;
+  display:none;
+  position:sticky;
   top: 100%;
-  left: 0;
+  
   background-color: #000;
   z-index: 1;
-  width: 100%;
+  width: 200%;
+  list-style: none;
+  wid
 }
 
 .dropdown:hover .sublinks {
-  display: block;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
 }
 
 .sublinks li {
-  width: 100%;
+  flex: 0 0 auto;  /* Make each list item flexible and not grow or shrink */
   text-align: center;
-  padding: 10px;
-  list-style: none; /* Remove bullet points */
+  white-space: nowrap;  /* Prevent text from wrapping to the next line */
+  margin-right: 10px;  /* Add some spacing between list items */
+
 }
+
+
 
 .sublinks a {
   color: #fff; /* Set the color for sub-links */
   text-decoration: none; /* Remove underline */
   display: block;
-  padding: 10px;
+  padding: 2px;
 }
 
 .sublinks a:hover {
-  background-color: var(--clr-primary-500); /* Add a background color on hover */
+  background-color: none; /* Add a background color on hover */
 }
 
 /* Update your media query for non-mobile devices */
@@ -580,6 +588,10 @@ section,
     
     
   }
+  .sublinks a:hover {
+    background-color: var(--clr-primary-500); /* Add a background color on hover */
+  }
+ 
 }
 
 
@@ -633,6 +645,7 @@ section,
     color: #a5a4f2;
     text-decoration: none;
     transition: color 0.3s ease;
+    list-style: none;
   }
 
   .sublinks a:hover {

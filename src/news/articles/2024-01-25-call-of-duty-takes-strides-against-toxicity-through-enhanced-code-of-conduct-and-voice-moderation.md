@@ -11,8 +11,7 @@ author: TDN TEAM
 date: '2024-01-25T00:00:00-05:00'
 tags:
   - articles
-  - mw3
-  - wz
+  - news
 image: /public/assets/images/mwiii-wz-anti-cheat-tout.jpg
 imageAlt: mwiii-wz-anti-cheat
 ---

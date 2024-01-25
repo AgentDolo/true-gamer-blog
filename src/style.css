@@ -532,7 +532,7 @@ section,
     position: relative;
   }
 
-  .navbar__links {
+  .navbar__links { 
     width: auto;
     padding: 0 1rem;
     font-size: 15px;

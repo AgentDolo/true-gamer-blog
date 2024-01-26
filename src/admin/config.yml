@@ -10,7 +10,7 @@ collections:
       create: true
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
       fields:
-        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Title", name: "title", widget: "string", options: ["HRM-9", "MCW"] }
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Author", name: "author", widget: "string", default: "TDN TEAM" }
         - { label: "Date", name: "date", widget: "datetime", picker_utc: false }

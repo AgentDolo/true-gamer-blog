@@ -12,8 +12,8 @@ collections:
       fields:
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Description", name: "description", widget: "string" }
-        - { label: "Author", name: "author", widget: "select", options: "TDN TEAM", default: "TDN TEAM" }
-        - { label: "Date", name: "date", widget: "date", picker_utc: false }
+        - { label: "Author", name: "author", widget: "string", default: "TDN TEAM" }
+        - { label: "Date", name: "date", widget: "datetime", picker_utc: false }
         - { label: "Tags", name: "tags", widget: "select", options: ["news", "news-mw3", "news-wz"], default: ["news"] }
         - { label: "Featured Image", name: "image", widget: "image" }
         - { label: "Image caption", name: "imageAlt", widget: "string" }

@@ -1,0 +1,29 @@
+import React from 'react';
+import { Widget } from 'netlify-cms-ui-default';
+
+class CustomDateControl extends React.Component {
+  render() {
+    const { onChange, forID, value } = this.props;
+    return (
+      <Widget label="" forID={forID} onChange={onChange}>
+        <input
+          type="text"
+          id={forID}
+          className="cms-widget-date"
+          value={value || ''}
+          onChange={(e) => onChange(e.target.value)}
+        />
+      </Widget>
+    );
+  }
+}
+
+export const CustomDatePreview = (props) => {
+  const { value } = props;
+  return <div>{value}</div>;
+};
+
+export const CustomDate = {
+  control: CustomDateControl,
+  preview: CustomDatePreview,
+};

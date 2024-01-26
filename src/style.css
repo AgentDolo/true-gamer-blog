@@ -1557,6 +1557,7 @@ h3.snippet__title  {
   #wz-loadout-content .snippet__wz-loadout-date span {
     color: var(--clr-neutral-100);
     font-size: 10px;
+    display: none;
     
   }
 

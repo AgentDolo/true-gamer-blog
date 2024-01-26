@@ -25,7 +25,7 @@ collections:
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
       fields:
         - { label: "wz-loadout-title", name: "title", widget: "string"}
-        - { label: "wz-loadout-author", name: "author", widget: "list", options: ["DOLO", "TGN TEAM"], default: ["TGN TEAM"] }
+        - { label: "wz-loadout-author", name: "author", widget: "string", options: ["DOLO", "TGN TEAM"], default: ["TGN TEAM"] }
         - { label: "wz-loadout-gun-name", name: "gunName", widget: "select", options: ["SVA 545", "MTZ-556", "MCW", "Holger 556", "DG-58", "FR 5.56", "RAM-7", "MTZ-762", "BAS-B", "Sidewinder", "Rival-9", "AMR9", "Striker", "WSP Storm", "WSP-9", "Striker 9", "HRM-9", "Riveter", "Lockwood 680", "Haymaker", "Holger 26", "Pulemyot 762", "DG-58 LSW", "Bruen Mk9", "TAQ Eradicator", "TAW Evolvere", "MTZ Interceptor", "MCW 6.8", "DM56", "KVO Enforcer", "Longbow", "KV Inhibitor", "KATT-ARM", "XRK-Stalker", "COR-45", "Renetti", "Tyr", "WSP Stinger", "RGL-80", "Stormender", "Gutter Knife", "Karambit"], default: [""] }
         - { label: "wz-loadout-category", name: "wz-gun-category", widget: "select", options: ["AR", "SMG", "LMG", "SNIPER", "BR", "SHOTGUN", "MELEE"], default: [""] }
         - { label: "wz-loadout-published-date", name: "date", widget: "date",  picker_utc: false }

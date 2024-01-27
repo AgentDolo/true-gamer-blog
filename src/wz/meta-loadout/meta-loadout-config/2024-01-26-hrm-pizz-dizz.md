@@ -1,6 +1,6 @@
 ---
-title: HRM Pizz Dizz
-author: TGN TEAM
+title: HRM-9
+author: PizzDizz
 gunName: HRM-9
 wz-gun-category: ' '
 date: '2024-01-26'

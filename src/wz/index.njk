@@ -3,29 +3,230 @@ title: WZ
 layout: 'base.njk'
 ---
 
-
-   <section class="hero">
-  <div class="container flow">
-      <div class="hero__content flow">
-        <h1 class="section-title">COMING <span class="purple-text">SOON!</span></h1>
-        <p>Follow us on all platforms below.</p>
-        
-        {#
-        <div class="flex-group">
-          <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
-          
-        </div>
-        #}
-      </div>
+<section class="wz-menu">
+  <div class="container">
+    <div class="wz-menu-grid">
+      <a href="#creator-section" class="wz-menu-item">CREATORS</a>
+      <a href="#wz-loadout-content" class="wz-menu-item">META</a>
+      <a href="#maps" class="wz-menu-item">MAPS</a>
       
+    </div>
   </div>
 </section>
 
-{#      
+
+<!-- Add this to your existing HTML -->
+<section id="creator-section" class="creator-section">
+  <div class="container">
+    <h1 class="section-title">CREATORS</h1>
+    <div class="creator-grid">
+      <!-- Creator 1: CREATOR OF THE WEEK -->
+      <div class="creator-row">
+        <h1 class="section-title">CREATOR OF <span class="purple-text">THE WEEK!</span></h1>
+        <div class="creator-info">
+          <div class="creator-avatar">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/c1543ec7-a3a9-4dbe-b825-e08b1a5f1f3d-profile_image-70x70.png" alt="Creator Avatar">
+          </div>
+          <div class="creator-details">
+            <h2 class="creator-username">@PIZZDIZZ</h2>
+            <div class="social-icons">
+              <!-- Add social icons (e.g., Twitch, Youtube, Instagram) here -->
+               <a href="https://www.twitch.tv/pizzdizz" class="social-icon twitch-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+<g fill="#6261d9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M5.36328,2l-3.36328,4.63672v13.36328h5v3h3l3,-3h4l5,-5v-13zM6,4h14v9l-3,3h-5l-3,3v-3h-3zM11,7v5h2v-5zM16,7v5h2v-5z"></path></g></g>
+</svg></a>
+              <a href="#" class="social-icon youtube-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+<g fill="#6261d9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M21.582,6.186c-0.23,-0.86 -0.908,-1.538 -1.768,-1.768c-1.56,-0.418 -7.814,-0.418 -7.814,-0.418c0,0 -6.254,0 -7.814,0.418c-0.86,0.23 -1.538,0.908 -1.768,1.768c-0.418,1.56 -0.418,5.814 -0.418,5.814c0,0 0,4.254 0.418,5.814c0.23,0.86 0.908,1.538 1.768,1.768c1.56,0.418 7.814,0.418 7.814,0.418c0,0 6.254,0 7.814,-0.418c0.861,-0.23 1.538,-0.908 1.768,-1.768c0.418,-1.56 0.418,-5.814 0.418,-5.814c0,0 0,-4.254 -0.418,-5.814zM10,14.598v-5.196c0,-0.385 0.417,-0.625 0.75,-0.433l4.5,2.598c0.333,0.192 0.333,0.674 0,0.866l-4.5,2.598c-0.333,0.193 -0.75,-0.048 -0.75,-0.433z"></path></g></g>
+</svg></a>
+              <a href="https://www.instagram.com/pizzthekid/" class="social-icon instagram-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+<g fill="#6261d9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z"></path></g></g>
+</svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Creator 2: Duplicate for PIZZDIZZ -->
+      <div class="creator-row">
+        <h1 class="section-title"><br></h1>
+        <div class="creator-info">
+          <div class="creator-avatar">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/c1543ec7-a3a9-4dbe-b825-e08b1a5f1f3d-profile_image-70x70.png" alt="Creator Avatar">
+          </div>
+          <div class="creator-details">
+            <h2 class="creator-username">@PIZZDIZZ</h2>
+            <div class="social-icons">
+              <!-- Add social icons (e.g., Twitch, Youtube, Instagram) here -->
+               <a href="https://www.twitch.tv/pizzdizz" class="social-icon twitch-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+<g fill="#6261d9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M5.36328,2l-3.36328,4.63672v13.36328h5v3h3l3,-3h4l5,-5v-13zM6,4h14v9l-3,3h-5l-3,3v-3h-3zM11,7v5h2v-5zM16,7v5h2v-5z"></path></g></g>
+</svg></a>
+              <a href="#" class="social-icon youtube-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+<g fill="#6261d9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M21.582,6.186c-0.23,-0.86 -0.908,-1.538 -1.768,-1.768c-1.56,-0.418 -7.814,-0.418 -7.814,-0.418c0,0 -6.254,0 -7.814,0.418c-0.86,0.23 -1.538,0.908 -1.768,1.768c-0.418,1.56 -0.418,5.814 -0.418,5.814c0,0 0,4.254 0.418,5.814c0.23,0.86 0.908,1.538 1.768,1.768c1.56,0.418 7.814,0.418 7.814,0.418c0,0 6.254,0 7.814,-0.418c0.861,-0.23 1.538,-0.908 1.768,-1.768c0.418,-1.56 0.418,-5.814 0.418,-5.814c0,0 0,-4.254 -0.418,-5.814zM10,14.598v-5.196c0,-0.385 0.417,-0.625 0.75,-0.433l4.5,2.598c0.333,0.192 0.333,0.674 0,0.866l-4.5,2.598c-0.333,0.193 -0.75,-0.048 -0.75,-0.433z"></path></g></g>
+</svg></a>
+              <a href="https://www.instagram.com/pizzthekid/" class="social-icon instagram-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+<g fill="#6261d9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z"></path></g></g>
+</svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+{#
+<section class="hero">
+  <div class="container flow">
+    <div class="hero__content flow">
+      <h1 class="section-title">COMING <span class="purple-text">SOON!</span></h1>
+      <p>Follow us on all platforms below.</p>
+    </div>
+  </div>
+</section>
+
+#}
+
+<div id="wz-loadout-content" class="wz-loadout-section container">
+  <div class="default-filter">
+    <div class="default-filter__header">
+      <div class="search-by-gun">
+        <div class="default-filter__label"></div>
+        <div class="wz-control-group">
+          <!---->
+          <div class="wz-text-field">
+            <!---->
+            <!---->
+            <input type="search" id="searchInput" placeholder="SEARCH GUN..." class="wz-text-field__input">
+
+            <!---->
+          </div>
+          <!---->
+        </div>
+      </div>
+      <button type="button" class="default-filter__toggle-btn wzh-button wzh-button__default">
+        <!---->
+        <div class="wzh-button__content"><i class="icon-filter"></i> <span>Filter</span></div>
+      </button>
+    </div>
+    <div class="default-filter__body" style="">
+      <div class="default-filter__inner">
+        <div>
+          <div class="default-filter__label">
+            SELECT RANGE
+          </div>
+          <div placeholder="All" multiple="multiple" class="wz-control-group">
+            <!---->
+            <div class="wz-control-group__inner">
+              <div class="el-select wz-select-control">
+                <div class="el-select__tags" style="width: 100%; max-width: 336px;">
+                  <!----><span></span><!---->
+                </div>
+                <div class="el-input el-input--suffix">
+                  <!----><input type="text" readonly="readonly" autocomplete="off" placeholder="All"
+                    class="el-input__inner" style="height: 40px;">
+                  <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i
+                        class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!---->
+                </div>
+                <div class="el-select-dropdown el-popper is-multiple" style="display: none; min-width: 368px;">
+                  <div class="el-scrollbar" style="">
+                    <div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;">
+                      <ul class="el-scrollbar__view el-select-dropdown__list">
+                        <!---->
+                        <li class="el-select-dropdown__item"><span>Long range</span></li>
+                        <li class="el-select-dropdown__item"><span>Close range</span></li>
+                        <li class="el-select-dropdown__item"><span>All ranges</span></li>
+                        <li class="el-select-dropdown__item"><span>Sniper support range</span></li>
+                        <li class="el-select-dropdown__item"><span>Akimbo range</span></li>
+                        <li class="el-select-dropdown__item"><span>Hip fire</span></li>
+                      </ul>
+                    </div>
+                    <div class="el-scrollbar__bar is-horizontal">
+                      <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                    </div>
+                    <div class="el-scrollbar__bar is-vertical">
+                      <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                    </div>
+                  </div>
+                  <!---->
+                </div>
+              </div>
+              <!---->
+            </div>
+            <!---->
+          </div>
+        </div>
+        <div>
+          <div class="default-filter__label">
+            SELECT TYPE
+          </div>
+          <div placeholder="All" multiple="multiple" filterable="" class="wz-control-group">
+            <!---->
+            <div class="wz-control-group__inner">
+              <div class="el-select wz-select-control">
+                <div class="el-select__tags" style="width: 100%; max-width: 336px;">
+                  <!----><span></span><input type="text" autocomplete="off" class="el-select__input"
+                    style="flex-grow: 1; width: 0.0595238%; max-width: 326px;">
+                </div>
+                <div class="el-input el-input--suffix">
+                  <!----><input tabindex="-1" type="text" readonly="readonly" autocomplete="off" placeholder="All"
+                    class="el-input__inner" style="height: 40px;">
+                  <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i
+                        class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span><!----></span><!----><!---->
+                </div>
+                <div class="el-select-dropdown el-popper is-multiple" style="display: none; min-width: 368px;">
+                  <div class="el-scrollbar" style="">
+                    <div class="el-select-dropdown__wrap el-scrollbar__wrap" style="margin-bottom: -17px; margin-right: -17px;">
+                      <ul class="el-scrollbar__view el-select-dropdown__list">
+                        <!---->
+                        <li class="el-select-dropdown__item"><span>AR</span></li>
+                        <li class="el-select-dropdown__item"><span>SMG</span></li>
+                        <li class="el-select-dropdown__item"><span>LMG</span></li>
+                        <li class="el-select-dropdown__item"><span>SNIPER</span></li>
+                        <li class="el-select-dropdown__item"><span>RIFLE</span></li>
+                        <li class="el-select-dropdown__item"><span>SHOTGUN</span></li>
+                        <li class="el-select-dropdown__item"><span>MELEE</span></li>
+                        <li class="el-select-dropdown__item"><span>B.RIFLES</span></li>
+                      </ul>
+                    </div>
+                    <div class="el-scrollbar__bar is-horizontal">
+                      <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                    </div>
+                    <div class="el-scrollbar__bar is-vertical">
+                      <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                    </div>
+                  </div>
+                  <!---->
+                </div>
+              </div>
+              <!---->
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="meta-section-title">META</h2>
+
+  <ul role="list" class="wz-loadout__list flow">
+    {%- for post in collections.wz | reverse-%}
+      {%- if loop.index > 1 -%} {# Skip the first item #}
+        {% include 'wz-meta-loadout-snippet.njk' %}
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>
+
+
+{#
 <section id="featured-articles-wz" class="featured-articles">
   <div class="container flow">
     <h2 class="section-title text-left">NEWS</h2>
-    
 
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -45,7 +246,4 @@ layout: 'base.njk'
     </div>
   </div>
 </section>
-  #}
-    
-  
-    
+#}

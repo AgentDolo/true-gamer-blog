@@ -952,6 +952,150 @@ section,
 
 
 
+
+
+
+
+
+
+/* Add this style to your existing CSS */
+.wz-menu {
+  background: #0B0A0E; /* Change background color */
+  padding: 10px 0; /* Adjust padding as needed */
+  position: fixed;
+  top: 1;
+  width: 100%; /* Make it full-width */
+  z-index: 1000; /* Adjust the z-index as needed */
+  
+  
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.wz-menu-grid {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.wz-menu-item {
+  flex: 1; /* Equal spacing for all items */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 1px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-align: center; /* Center the text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.wz-menu-item:hover {
+  background-color: var(--clr-primary-500);
+  color: var(--clr-neutral-100);
+}
+
+/* Add this style to create space below the menu */
+.main-content {
+  padding-top: 70px; /* Adjust the margin based on the menu height */
+}
+
+
+
+
+
+
+/* Add this style to your existing CSS */
+.creator-section {
+  background: #0B0A0E; /* Change background color */
+  padding: 20px 0; /* Adjust padding as needed */
+  padding-bottom: 30px;
+  
+}
+
+.creator-grid {
+  display: flex;
+  flex-direction: column; /* Display as a column */
+  align-items: center; /* Center the content horizontally */
+  justify-content: space-evenly;
+}
+
+.creator-info {
+  display: flex;
+  align-items: center;
+  max-width: 600px; /* Adjust the maximum width as needed */
+  margin: 0 auto;
+}
+
+.creator-avatar img {
+  width: 70px; /* Adjust the width of the avatar image */
+  height: 70px; /* Adjust the height of the avatar image */
+  border-radius: 50%;
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.creator-details {
+  color: #fff;
+}
+
+.creator-username {
+  font-size: 1rem; /* Adjust font size as needed */
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icon {
+  font-size: 1.5rem; /* Adjust font size as needed */
+  color: #fff;
+  padding-right: 15px; /* Adjust margin as needed */
+  
+}
+
+/* Add this style to your existing CSS */
+.creator-section h1.section-title {
+  text-align: center;
+  padding-bottom: 30px; /* Adjust margin as needed */
+  padding-top: 60px;
+}
+
+
+.creator-section .creator-grid h1.section-title {
+  font-size: 14px;
+  padding-top: 20px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* //////////////////////
   Footer
   /////////////////////// */

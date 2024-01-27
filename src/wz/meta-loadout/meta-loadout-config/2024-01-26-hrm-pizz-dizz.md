@@ -2,7 +2,7 @@
 title: HRM Pizz Dizz
 author: TGN TEAM
 gunName: HRM-9
-wz-gun-category: SMG
+wz-gun-category: ' '
 date: '2024-01-26'
 image: /assets/images/test_gun_image.png
 range: Short

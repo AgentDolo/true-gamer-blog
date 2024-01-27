@@ -2,7 +2,7 @@
 title: HRM-9
 author: PizzDizz
 gunName: HRM-9
-wz-gun-category: ' '
+category: SMG
 date: '2024-01-26'
 image: /assets/images/test_gun_image.png
 range: Short

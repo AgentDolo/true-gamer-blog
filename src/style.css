@@ -284,8 +284,9 @@ section,
 
 /* Update the CSS for .swiper-container */
 .swiper-container {
-  width: 100%; /* Adjust the width as needed */
-  max-width: 600px; /* Set a max-width to control the size on larger screens */
+  width: 100% !important; /* Adjust the width as needed */
+  max-width: 900px !important; /* Set a max-width to control the size on larger screens */
+  max-height: 900px !important;
   height: 250px; /* Adjust the height as needed */
   overflow: hidden; 
   text-decoration: none;
@@ -299,7 +300,7 @@ section,
   border: 0px solid #000000 ; /* Add a border for separation */
   border-radius: 10px;
   box-sizing: border-box;
-  width: 100%;
+  width: 50% !important;
   padding: 2px;
   
 }
@@ -949,9 +950,26 @@ section,
 
 
 
+#terms-of-service-body p {
+  color: #fff;
+  padding: 1rem;
+}
+
+#terms-of-service-body li {
+  color: var(--clr-primary-500);
+  padding: 1rem;
+}
 
 
+#privacy-policy-body p {
+  color: #fff;
+  padding: 1rem;
+}
 
+#privacy-policy-body li {
+  color: var(--clr-primary-500);
+  padding: 1rem;
+}
 
 
 
@@ -965,7 +983,7 @@ section,
   position: fixed;
   top: 1;
   width: 100%; /* Make it full-width */
-  z-index: 1000; /* Adjust the z-index as needed */
+  z-index: 998; /* Adjust the z-index as needed */
   
   
 }
@@ -977,7 +995,7 @@ section,
 
 .wz-menu-grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 
 }
 
@@ -986,7 +1004,7 @@ section,
   color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
-  padding: 1px;
+  padding: 5px;
   border: 1px solid #fff;
   border-radius: 5px;
   text-align: center; /* Center the text */
@@ -1008,11 +1026,249 @@ section,
 
 
 
+
+
+
+
+/* Add this to your existing CSS */
+.discord-section {
+  text-align: center;
+  padding-top: 7rem;
+}
+
+.discord-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Add this to your existing CSS */
+.discord-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px; /* Adjust the padding as needed */
+}
+
+.discord-link {
+  display: block;
+  margin-bottom: 10px; /* Adjust the margin as needed */
+  text-decoration: none;
+}
+
+.discord-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discord-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffffff; /* Discord brand color */
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+.discord-button:hover {
+  background-color: #677bc4; /* Darker shade on hover */
+}
+
+
+
+
+
+
+
+
+/* Add this to your existing CSS */
+.discord-iframe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Add this to your existing CSS */
+.discord-row h1 {
+  font-size: 1rem; /* Adjust the font size as needed */
+  
+  
+}
+
+/* Add this to your existing CSS */
+#discord-section .discord-grid {
+  margin-top: -2rem; /* Adjust the font size as needed */
+  
+  
+}
+
+#discord-section .section-title {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+/* Your existing CSS styles go here */
+
+/* Add this style to your existing CSS */
+.ranked-section {
+  background: #0B0A0E; /* Change background color */
+  padding: 20px 0; /* Adjust padding as needed */
+  padding-bottom: 30px;
+  margin-top: -3rem;
+}
+
+.ranked-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Center the columns horizontally */
+  background: #2d006c00;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.716); /* Add this line to set the border color to white */
+  padding: 10px;
+}
+
+
+.ranked-item {
+  flex: 0 0 calc(33.3333% - 20px); /* Adjust width of each item as needed */
+  margin: 10px; /* Adjust margin as needed */
+  text-align: center;
+  
+}
+
+.ranked-avatar img {
+  width: 70px; /* Adjust the width of the avatar image */
+  height: 70px; /* Adjust the height of the avatar image */
+  border-radius: 50%;
+  margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.ranked-details {
+  color: #fff;
+}
+
+.ranked-username {
+  font-size: 1rem; /* Adjust font size as needed */
+  margin-bottom: 10px; /* Adjust margin as needed */
+  text-align: center;
+}
+
+.ranked-position {
+  font-size: 1.2rem; /* Adjust font size as needed */
+  color: #fff;
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+/* Add this style to your existing CSS */
+.ranked-section h1.section-title {
+  text-align: center;
+  padding-bottom: 30px; /* Adjust margin as needed */
+  padding-top: 60px;
+}
+
+.ranked-section .ranked-grid h1.section-title {
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+.ranked-row {
+  display: flex;
+  align-items: center; /* Center the content horizontally within each row */
+  margin: 10px 0; /* Adjust the margin as needed */
+  background: #0B0A0E;
+  padding: 5px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.778); /* Add this line to set the border color to white */
+}
+
+.ranked-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content vertically within each column */
+  margin-top: 5px; /* Adjust the margin as needed */
+  
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px; /* Adjust the gap between social icons as needed */
+  align-items: center;
+}
+
+.social-icon {
+  display: inline-block;
+  align-items: center;
+}
+
+
+
+
+/* Additional styles for the smaller avatars */
+.ranked-avatar-smaller img {
+  width: 30px; /* Adjust the width of the avatar image for players 3 to 10 */
+  height: 30px; /* Adjust the height of the avatar image for players 3 to 10 */
+}
+
+
+
+
+
+/* Additional styles for the two-column layout */
+@media screen and (min-width: 768px) {
+  .ranked-item {
+    flex: 0 0 calc(50% - 10px); /* Adjust width for two columns with smaller spacing */
+    margin: 5px; /* Adjust margin for smaller spacing between columns */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Add this style to your existing CSS */
 .creator-section {
   background: #0B0A0E; /* Change background color */
   padding: 20px 0; /* Adjust padding as needed */
   padding-bottom: 30px;
+  
   
 }
 
@@ -1021,6 +1277,10 @@ section,
   flex-direction: column; /* Display as a column */
   align-items: center; /* Center the content horizontally */
   justify-content: space-evenly;
+  background: #2d006c00;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.716); /* Add this line to set the border color to white */
+  padding-bottom: 2rem;
 }
 
 .creator-info {
@@ -1053,7 +1313,7 @@ section,
 .social-icon {
   font-size: 1.5rem; /* Adjust font size as needed */
   color: #fff;
-  padding-right: 15px; /* Adjust margin as needed */
+  padding: 7px; /* Adjust margin as needed */
   
 }
 

@@ -1,7 +1,6 @@
 ---
 title: >-
-  Call of Duty Takes Strides Against Toxicity Through Enhanced Code of Conduct
-  and Voice Moderation
+  Call of Duty Takes Strides Against Toxicity
 description: >-
   In its ongoing commitment to fostering inclusive gaming communities, Call of
   Duty is intensifying efforts to curb toxicity and disruptive behavior. This
@@ -12,6 +11,7 @@ date: 2024-01-25
 tags:
   - articles
   - news
+  - featured
 image: /assets/images/mwiii-wz-anti-cheat-tout.jpg
 imageAlt: mwiii-wz-anti-cheat
 ---

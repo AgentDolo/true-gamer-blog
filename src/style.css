@@ -972,7 +972,10 @@ section,
 }
 
 
-
+#privacy-policy-body h3 {
+  color: #fff;
+  
+}
 
 
 
@@ -1130,15 +1133,31 @@ section,
   margin-top: -3rem;
 }
 
+/* Add this to your existing CSS */
+/* Add this to your existing CSS */
 .ranked-grid {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Center the columns horizontally */
-  background: #2d006c00;
+  justify-content: space-around;
+  background: linear-gradient(to right, rgb(113, 0, 233), rgb(255, 0, 128));
   border-radius: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.716); /* Add this line to set the border color to white */
   padding: 10px;
 }
+
+.ranked-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 2px solid rgba(255, 255, 255, 0.244);
+  border-radius: 20px;
+  pointer-events: none; /* Allow clicks to pass through the pseudo-element */
+}
+
+
 
 
 .ranked-item {
@@ -1153,6 +1172,7 @@ section,
   height: 70px; /* Adjust the height of the avatar image */
   border-radius: 50%;
   margin-bottom: 10px; /* Adjust the margin as needed */
+  border: 2px solid var(--clr-primary-500);
 }
 
 .ranked-details {
@@ -1183,15 +1203,109 @@ section,
   padding-top: 20px;
 }
 
+/* Add this to your existing CSS */
 .ranked-row {
+  position: relative;
   display: flex;
-  align-items: center; /* Center the content horizontally within each row */
-  margin: 10px 0; /* Adjust the margin as needed */
-  background: #0B0A0E;
+  align-items: center;
+  margin: 10px 0;
   padding: 5px;
   border-radius: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.778); /* Add this line to set the border color to white */
+  border: 2px solid rgba(255, 255, 255, 0.064);
+  overflow: hidden;
+  background-color: #08080a;
 }
+
+.ranked-row:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://static.vecteezy.com/system/resources/previews/017/190/455/large_2x/number-1-metallic-gold-number-balloon-airfoil-filled-number-illustration-isolated-on-transparent-background-design-element-for-festive-party-decoration-free-png.png');
+  background-repeat: no-repeat;
+  background-size: contain; /* Adjust as needed */
+  background-position: right;
+  opacity: 0.2; /* Adjust opacity as needed */
+}
+
+
+/* Add this to your existing CSS */
+.ranked-row:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://static.vecteezy.com/system/resources/previews/017/190/457/non_2x/number-2-metallic-gold-number-balloon-airfoil-filled-number-illustration-isolated-on-transparent-background-design-element-for-festive-party-decoration-free-png.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: 5rem !important; /* Adjust as needed */
+  background-position: top right !important;
+  opacity: 0.2 !important; /* Adjust opacity as needed */
+}
+
+
+.ranked-row:nth-of-type(3)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://static.vecteezy.com/system/resources/previews/017/190/458/non_2x/number-3-metallic-gold-number-balloon-airfoil-filled-number-illustration-isolated-on-transparent-background-design-element-for-festive-party-decoration-free-png.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: 5rem !important; /* Adjust as needed */
+  background-position: top right !important;
+  opacity: 0.2 !important; /* Adjust opacity as needed */
+}
+
+.ranked-row:nth-of-type(4)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://static.vecteezy.com/system/resources/previews/017/190/448/non_2x/number-4-metallic-gold-number-balloon-airfoil-filled-number-illustration-isolated-on-transparent-background-design-element-for-festive-party-decoration-free-png.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: 5rem !important; /* Adjust as needed */
+  background-position: top right !important;
+  opacity: 0.2 !important; /* Adjust opacity as needed */
+}
+
+
+.ranked-row:nth-of-type(5)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://static.vecteezy.com/system/resources/previews/017/190/442/non_2x/number-5-metallic-gold-number-balloon-airfoil-filled-number-illustration-isolated-on-transparent-background-design-element-for-festive-party-decoration-free-png.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: 5rem !important; /* Adjust as needed */
+  background-position: top right !important;
+  opacity: 0.2 !important; /* Adjust opacity as needed */
+}
+
+
+.ranked-row:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://static.vecteezy.com/system/resources/previews/017/190/457/non_2x/number-2-metallic-gold-number-balloon-airfoil-filled-number-illustration-isolated-on-transparent-background-design-element-for-festive-party-decoration-free-png.png');
+  background-repeat: no-repeat;
+  background-size: 5rem; /* Adjust as needed */
+  background-position: top right;
+  opacity: 0.2; /* Adjust opacity as needed */
+}
+
+
 
 .ranked-info {
   display: flex;
@@ -1217,8 +1331,8 @@ section,
 
 /* Additional styles for the smaller avatars */
 .ranked-avatar-smaller img {
-  width: 30px; /* Adjust the width of the avatar image for players 3 to 10 */
-  height: 30px; /* Adjust the height of the avatar image for players 3 to 10 */
+  width: 45px; /* Adjust the width of the avatar image for players 3 to 10 */
+  height: 45px; /* Adjust the height of the avatar image for players 3 to 10 */
 }
 
 
@@ -1677,6 +1791,10 @@ h3.snippet__title  {
 #wz-loadout-content .default-filter__body {
   display: none;
   
+}
+
+#wz-loadout-content .el-input__inner {
+  border-radius: 20px;
 }
 
 #wz-loadout-content .default-filter.show-filter .default-filter__body {
